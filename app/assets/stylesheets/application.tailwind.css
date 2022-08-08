@@ -2,12 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  body {
+    @apply text-sm;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary-dark font-bold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    @apply mt-3;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply text-xl mt-4;
+  }
+
+  button, .button {
+    @apply inline-block bg-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
+
+    min-width: 10rem;
+  }
+
+  .button:hover {
+    @apply shadow;
+  }
+
+  header nav li {
+    @apply inline-block;
+  }
+
+  header nav li + li {
+    @apply pl-6;
+  }
+
+  header nav li a {
+    @apply font-bold text-grey-foreground;
+  }
+
+  svg.non-scaling-stroke * {
+    vector-effect: non-scaling-stroke;
   }
 }
-
-*/

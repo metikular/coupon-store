@@ -1,0 +1,7 @@
+.flex.justify-between
+  %ul
+    %li= link_to t('navigation.home'), root_path
+    %li= link_to t('actions.sign_up'), new_user_registration_path
+
+  %ul
+    %li= link_to t('actions.sign_in'), new_user_session_path

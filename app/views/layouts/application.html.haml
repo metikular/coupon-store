@@ -7,5 +7,27 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
-  %body
-    = yield
+  %body.flex.flex-col.justify-between.h-screen{class: page_classes}
+    %div
+      %header
+        %nav.bg-primary.p-6
+          - if current_user.present?
+            = render 'user_menu'
+          - else
+            = render 'guest_menu'
+
+      %main{class: body_classes}
+        = yield
+
+    - if content_for? :footer
+      = yield :footer
+    - else
+      %footer.bg-grey-background.p-4
+        .flex.gap-5.items-center
+          = image_tag 'github.png', title: t('footer.open_source')
+          = link_to 'https://www.metikular.ch' do
+            = image_tag 'metikular.svg', title: t('footer.made_by_metikular')
+
+          - if lookup_context.exists?('data_privacy', 'pages')
+            .pl-3.text-xs.text-grey-foreground
+              = link_to t('footer.data_privacy'), page_path(:data_privacy)

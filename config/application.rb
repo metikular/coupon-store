@@ -21,5 +21,8 @@ module CouponStore
     config.generators do |g|
       g.template_engine :haml
     end
+
+    I18n.available_locales = %i[en]
+    I18n.default_locale = :en
   end
 end

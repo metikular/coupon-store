@@ -1,0 +1,28 @@
+.container.mx-auto.mt-20.p-8.pt-0.max-w-prose
+  .flex.flex-col-reverse.sm:flex-row.justify-between.items-center.gap-4
+    %div
+      %h1= t '.title'
+      %p.mt-4= t '.lead'
+    = heroicon 'ticket', options: {class: 'text-primary-dark w-24 h-24 non-scaling-stroke', style: 'transform:rotate(325deg);vector-effect:non-scaling-stroke'}
+
+  .text-center.mt-40
+    = link_to t('actions.sign_up'), new_user_registration_path, class: 'button'
+
+= content_for :footer do
+  %footer.bg-grey-background.p-4
+    .grid.gap-3(style="grid-template-columns: 3rem 1fr")
+      .flex.justify-center= image_tag 'github.png'
+      .flex.items-center= t 'footer.open_source'
+
+      .flex.justify-center= image_tag 'docker.png'
+      .flex.items-center= t 'footer.self_hostable'
+
+      .flex.justify-center= heroicon :heart, variant: :solid, options: {class: 'w-8 h-8'}
+      .flex.items-center= t 'footer.free_to_use'
+
+      .flex.justify-center= image_tag 'metikular.svg'
+      .flex.items-center= t 'footer.made_by_metikular'
+
+      - if lookup_context.exists?('data_privacy', 'pages')
+        .pl-3.text-xs.text-grey-foreground(style="grid-column: span 2")
+          = link_to t('footer.data_privacy'), page_path(:data_privacy)
