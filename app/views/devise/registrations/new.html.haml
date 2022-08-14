@@ -1,0 +1,13 @@
+%h1= t 'devise.sign_up'
+
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }
+    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" }
+    = f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" }
+
+  .form-actions
+    = link_to t('devise.sign_in_instead'), new_session_path(resource_name), class: 'button text'
+    = f.button :submit, t('devise.sign_up')

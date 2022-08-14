@@ -23,14 +23,18 @@
     @apply text-xl mt-4;
   }
 
-  button, .button {
+  button.primary, .button.primary, input[type="submit"] {
     @apply inline-block bg-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
 
     min-width: 10rem;
   }
 
-  .button:hover {
+  button.primary:hover, .button.primary:hover, input[type="submit"]:hover {
     @apply shadow;
+  }
+
+  button.text, .button.text {
+    @apply inline-block uppercase text-grey-foreground font-bold;
   }
 
   header nav li {
@@ -47,5 +51,38 @@
 
   svg.non-scaling-stroke * {
     vector-effect: non-scaling-stroke;
+  }
+
+
+  .input {
+    @apply mt-6;
+  }
+
+  label {
+    @apply font-bold uppercase text-grey-foreground block;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    @apply rounded shadow border-none w-full;
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    @apply outline outline-primary outline-offset-0 border-0;
+  }
+
+  .hint {
+    @apply text-sm text-grey-foreground;
+  }
+
+  label + input {
+    @apply mt-2;
+  }
+
+  .form-actions {
+    @apply mt-16 flex justify-end items-end gap-2;
+  }
+
+  .form-actions .button.text {
+    @apply mb-2;
   }
 }

@@ -14,3 +14,8 @@ en:
     free_to_use: Free to use
     made_by_metikular: Made by metikular.ch
     data_privacy: Data privacy
+  devise:
+    sign_up: Sign up
+    sign_in: Sign in
+    sign_in_instead: Sign in instead
+    sign_up_instead: Sign up instead

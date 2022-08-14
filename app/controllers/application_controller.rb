@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def body_classes
-    ""
+    "p-6"
   end
 end
