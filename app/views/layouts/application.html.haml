@@ -10,7 +10,7 @@
   %body.flex.flex-col.justify-between.h-screen{class: page_classes}
     %div
       %header
-        %nav.bg-primary.p-6
+        %nav.bg-primary
           - if current_user.present?
             = render 'user_menu'
           - else

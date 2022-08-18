@@ -1,0 +1,7 @@
+%h1= t '.title'
+
+= simple_form_for @user, url: user_path(locale: I18n.locale) do |f|
+  = f.input :email
+
+  .form-actions
+    = f.submit

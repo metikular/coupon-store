@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   scope "/:locale" do
     get "/pages/:id", to: "pages#show", as: :page
+
+    resource :user, only: %i[show edit update]
   end
 end

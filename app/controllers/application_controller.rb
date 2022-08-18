@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def page_classes
-    ""
+    "bg-grey-page"
   end
 
   def body_classes

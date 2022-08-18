@@ -6,8 +6,12 @@ en:
   actions:
     sign_in: Sign in
     sign_up: Sign up
+  helpers:
+    submit:
+      update: Update
   navigation:
     home: Home
+    account: My account
   footer:
     open_source: Open source
     self_hostable: Self hostable
@@ -19,3 +23,9 @@ en:
     sign_in: Sign in
     sign_in_instead: Sign in instead
     sign_up_instead: Sign up instead
+  users:
+    show:
+      title: Account
+      email_address: Email address
+    edit:
+      title: Edit email address
