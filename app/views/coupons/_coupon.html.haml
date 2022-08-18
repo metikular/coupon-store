@@ -1,0 +1,16 @@
+.rounded.bg-white.shadow.p-4.pr-1.flex.justify-between
+  %div
+    - if coupon.store.present?
+      .text-grey-foreground.text-sm.uppercase.font-bold.pb-4= coupon.store
+
+    .font-bold.text-lg= coupon.code
+    = coupon.description
+
+    - if coupon.valid_until.present?
+      .mt-6.flex.gap-8
+        %span= t '.valid_until'
+        = l coupon.valid_until.to_date
+
+  .text-grey-foreground.self-center
+    = link_to coupon, class: 'block p-2 hover:rounded-full hover:bg-grey-background' do
+      = heroicon 'chevron-right', options: {class: 'w-6 h-6'}

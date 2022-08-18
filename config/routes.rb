@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "/pages/:id", to: "pages#show", as: :page
 
     resource :user, only: %i[show edit update destroy]
+    resources :coupons
   end
 end

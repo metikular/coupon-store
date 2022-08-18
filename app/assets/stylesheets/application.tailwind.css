@@ -23,17 +23,21 @@
     @apply text-xl mt-4;
   }
 
-  button.primary, .button.primary, input[type="submit"] {
+  button, input[type="submit"] {
+    @apply cursor-pointer;
+  }
+
+  button.primary, .button.primary, input[type="submit"]:not(.text) {
     @apply inline-block bg-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
 
     min-width: 10rem;
   }
 
-  button.primary:hover, .button.primary:hover, input[type="submit"]:hover {
+  button.primary:hover, .button.primary:hover, input[type="submit"]:hover:not(.text) {
     @apply shadow;
   }
 
-  button.text, .button.text {
+  button.text, .button.text, input[type="submit"].text {
     @apply inline-block uppercase text-grey-foreground font-bold;
   }
 
@@ -66,7 +70,7 @@
     @apply font-bold uppercase text-grey-foreground block;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="datetime-local"], input[type="date"] {
     @apply rounded shadow border-none w-full;
   }
 
@@ -88,5 +92,13 @@
 
   .form-actions .button.text {
     @apply mb-2;
+  }
+
+  .button.text.toggle {
+    @apply font-normal;
+  }
+
+  .button.text.toggle.active {
+    @apply font-bold;
   }
 }

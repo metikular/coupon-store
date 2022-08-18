@@ -1,0 +1,13 @@
+.bg-grey-background.p-4
+  = link_to new_coupon_path, class: 'block' do
+    .flex.gap-4.text-grey-foreground.items-center
+      = heroicon :plus, options: {class: 'w-6 h-6'}
+      = t 'coupons.new.title'
+
+.p-6.pb-0.flex.gap-4
+  = link_to t('.valid'), url_for(valid: 'true'), class: "button text toggle #{current_scopes[:valid] ? 'active' : ''}"
+  = link_to t('.used'), url_for(used: 'true', valid: 'false'), class: "button text toggle #{current_scopes[:used] ? 'active' : ''}"
+  = link_to t('.expired'), url_for(expired: 'true', valid: 'false'), class: "button text toggle #{current_scopes[:expired] ? 'active' : ''}"
+
+.p-6.flex.flex-col.gap-4
+  = render @coupons

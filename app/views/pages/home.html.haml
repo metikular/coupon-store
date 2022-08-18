@@ -8,7 +8,7 @@
   .text-center.mt-40
     = link_to t('actions.sign_up'), new_user_registration_path, class: 'button primary'
 
-= content_for :footer do
+- content_for :footer do
   %footer.bg-grey-background.p-4
     .grid.gap-3(style="grid-template-columns: 3rem 1fr")
       .flex.justify-center= image_tag 'github.png'

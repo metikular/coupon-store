@@ -1,0 +1,8 @@
+= simple_form_for @coupon do |f|
+  = f.input :code
+  = f.input :store
+  = f.input :description
+  = f.input :valid_until, html5: true
+
+  .form-actions
+    = f.submit

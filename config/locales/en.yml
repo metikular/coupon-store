@@ -31,3 +31,20 @@ en:
       delete_confirmation: This deletes your account and all coupons and loyalty cards associated with it. Are you sure?
     edit:
       title: Edit email address
+  coupons:
+    new:
+      title: New coupon
+    index:
+      valid: Valid
+      used: Used
+      expired: Expired
+    show:
+      mark_used: Mark used
+      mark_unused: Mark unused
+      edit: Edit
+      delete: Delete
+      delete_confirmation: Are you sure?
+    edit:
+      title: Edit coupon
+    coupon:
+      valid_until: Valid until

@@ -118,6 +118,9 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    has_scope (0.8.0)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
     heroicon (0.4.0)
       rails (>= 5.2)
     html2haml (2.2.0)
@@ -303,6 +306,7 @@ DEPENDENCIES
   factory_bot_rails
   haml
   haml-rails
+  has_scope
   heroicon
   importmap-rails
   jbuilder
