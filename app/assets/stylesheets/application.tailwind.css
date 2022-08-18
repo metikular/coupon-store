@@ -37,6 +37,10 @@
     @apply inline-block uppercase text-grey-foreground font-bold;
   }
 
+  button.text.danger, .button.text.danger {
+    @apply text-danger;
+  }
+
   header nav li {
     @apply inline-block;
   }

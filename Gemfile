@@ -32,6 +32,7 @@ gem "cancancan"
 gem "devise"
 gem "haml"
 gem "haml-rails"
+gem "importmap-rails"
 gem "simple_form"
 gem "kaminari"
 

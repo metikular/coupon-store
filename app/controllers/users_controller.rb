@@ -18,6 +18,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy!
+
+    sign_out @user
+
+    redirect_to "/"
+  end
+
   private
 
   def set_user

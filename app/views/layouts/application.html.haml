@@ -6,6 +6,7 @@
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
     = csrf_meta_tags
     = csp_meta_tag
+    = javascript_importmap_tags
     = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
   %body.flex.flex-col.justify-between.h-screen{class: page_classes}
     %div

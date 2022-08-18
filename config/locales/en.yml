@@ -27,5 +27,7 @@ en:
     show:
       title: Account
       email_address: Email address
+      delete_my_account: Delete my account
+      delete_confirmation: This deletes your account and all coupons and loyalty cards associated with it. Are you sure?
     edit:
       title: Edit email address

@@ -8,3 +8,7 @@
   .text-grey-foreground
     = link_to edit_user_path do
       = heroicon :pencil, options: {class: 'w-6 h-6'}
+
+.mt-14
+  .text-danger
+    = button_to t('.delete_my_account'), user_path, method: :delete, 'data-confirm': t('.delete_confirmation'), class: 'text danger'

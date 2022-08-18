@@ -17,7 +17,8 @@ module.exports = {
         'primary-dark': '#FFD200',
         'grey-foreground': '#777777',
         'grey-background': '#efefef',
-        'grey-page': '#fafafa'
+        'grey-page': '#fafafa',
+        'danger': '#ff8a8a'
       }
     },
   },
