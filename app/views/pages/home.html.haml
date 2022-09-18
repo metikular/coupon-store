@@ -6,7 +6,10 @@
     = heroicon 'ticket', options: {class: 'text-primary-dark w-24 h-24 non-scaling-stroke', style: 'transform:rotate(325deg);vector-effect:non-scaling-stroke'}
 
   .text-center.mt-40
-    = link_to t('actions.sign_up'), new_user_registration_path, class: 'button primary'
+    - if user_signed_in?
+      = link_to t('.go_to_coupons'), coupons_path, class: 'button primary'
+    - else
+      = link_to t('actions.sign_up'), new_user_registration_path, class: 'button primary'
 
 - content_for :footer do
   %footer.bg-grey-background.p-4

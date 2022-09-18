@@ -3,6 +3,7 @@ en:
     home:
       title: Coupon store
       lead: A home for all your coupons and loyalty cards.
+      go_to_coupons: Go to coupons
   actions:
     sign_in: Sign in
     sign_up: Sign up
