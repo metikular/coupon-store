@@ -2,6 +2,12 @@
 
 A home for all your coupons and loyalty cards.
 
+## Setup
+
+### Instance specific configuration
+
+Add a page for data privacy by creating a file at `app/views/pages/data_privacy.html.haml`.
+
 ## Development
 
 ```shell

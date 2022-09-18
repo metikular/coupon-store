@@ -27,6 +27,9 @@
 
 /public/assets
 
+# Files provided during deployment as these are customised to the specific instance
+app/views/pages/data_privacy.html.haml
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
