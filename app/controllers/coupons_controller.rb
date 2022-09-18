@@ -58,6 +58,7 @@ class CouponsController < ApplicationController
       .require(:coupon)
       .permit(
         :code,
+        :barcode_type,
         :store,
         :description,
         :valid_until,

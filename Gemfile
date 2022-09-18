@@ -3,9 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+gem "barby"
 gem "bootsnap", require: false
 gem "cancancan"
 gem "devise"
+gem "enumerize"
 gem "haml"
 gem "haml-rails"
 gem "has_scope"

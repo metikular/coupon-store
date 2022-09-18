@@ -1,4 +1,13 @@
 en:
+  activerecord:
+    attributes:
+      coupon:
+        barcode_type: Barcode type
+  enumerize:
+    coupon:
+      barcode_type:
+        none: None
+        ean_13: EAN 13
   pages:
     home:
       title: Coupon store

@@ -78,11 +78,15 @@
     @apply outline outline-primary outline-offset-0 border-0;
   }
 
+  select {
+    @apply border-none w-full shadow;
+  }
+
   .hint {
     @apply text-sm text-grey-foreground;
   }
 
-  label + input {
+  label + input, label + select {
     @apply mt-2;
   }
 
@@ -100,5 +104,9 @@
 
   .button.text.toggle.active {
     @apply font-bold;
+  }
+
+  .barcode svg {
+    @apply w-full max-w-md;
   }
 }

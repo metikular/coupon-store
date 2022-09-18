@@ -1,5 +1,9 @@
 class Coupon < ApplicationRecord
+  extend Enumerize
+
   belongs_to :user
+
+  enumerize :barcode_type, in: %i[none ean_13]
 
   validates :code, presence: true
 

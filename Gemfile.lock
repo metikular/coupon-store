@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    barby (0.6.8)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
@@ -100,6 +101,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    enumerize (2.5.0)
+      activesupport (>= 3.2)
     erubi (1.11.0)
     erubis (2.7.0)
     factory_bot (6.2.1)
@@ -296,12 +299,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  barby
   bootsnap
   cancancan
   capybara
   capybara-screenshot
   debug
   devise
+  enumerize
   factory_bot
   factory_bot_rails
   haml
