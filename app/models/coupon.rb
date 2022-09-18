@@ -3,7 +3,7 @@ class Coupon < ApplicationRecord
 
   belongs_to :user
 
-  enumerize :barcode_type, in: %i[none ean_13]
+  enumerize :barcode_type, in: BarcodeHelper::TYPES
 
   validates :code, presence: true
 

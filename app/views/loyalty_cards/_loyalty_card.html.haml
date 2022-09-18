@@ -1,0 +1,10 @@
+.rounded.bg-white.shadow.p-4.pr-1.flex.justify-between
+  %div
+    - if loyalty_card.store.present?
+      .text-grey-foreground.text-sm.uppercase.font-bold.pb-4= loyalty_card.store
+
+    .font-bold.text-lg= loyalty_card.code
+
+  .text-grey-foreground.self-center
+    = link_to loyalty_card, class: 'block p-2 hover:rounded-full hover:bg-grey-background' do
+      = heroicon 'chevron-right', options: {class: 'w-6 h-6'}

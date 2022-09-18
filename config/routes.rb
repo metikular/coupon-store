@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
     resource :user, only: %i[show edit update destroy]
     resources :coupons
+    resources :loyalty_cards
   end
 end

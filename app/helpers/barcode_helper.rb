@@ -1,4 +1,6 @@
 module BarcodeHelper
+  TYPES = %i[none ean_13].freeze
+
   def barcode_svg(barcode, barcode_type)
     return if barcode_type.blank? || barcode_type.to_sym == :none
 

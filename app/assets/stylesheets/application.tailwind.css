@@ -54,7 +54,11 @@
   }
 
   header nav li a {
-    @apply font-bold text-grey-foreground;
+    @apply text-grey-foreground;
+  }
+
+  header nav li a.active {
+    @apply font-bold;
   }
 
   svg.non-scaling-stroke * {

@@ -1,6 +1,7 @@
 .flex.justify-between
   %ul.p-6
-    %li= link_to t('navigation.coupons'), coupons_path
+    %li= link_to t('navigation.coupons'), coupons_path, class: class_names(active: params[:controller] == 'coupons')
+    %li= link_to t('navigation.loyalty_cards'), loyalty_cards_path, class: class_names(active: params[:controller] == 'loyalty_cards')
 
   %ul.p-4.pr-6.flex.items-center
     %li

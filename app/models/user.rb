@@ -5,6 +5,7 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable
 
   has_many :coupons
+  has_many :loyalty_cards
 
   def remember_me
     super.nil? ? true : super

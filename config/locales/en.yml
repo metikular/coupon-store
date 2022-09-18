@@ -8,6 +8,10 @@ en:
       barcode_type:
         none: None
         ean_13: EAN 13
+    loyalty_card:
+      barcode_type:
+        none: None
+        ean_13: EAN 13
   pages:
     home:
       title: Coupon store
@@ -22,6 +26,8 @@ en:
   navigation:
     home: Home
     account: My account
+    coupons: Coupons
+    loyalty_cards: Loyalty cards
   footer:
     open_source: Open source
     self_hostable: Self hostable
@@ -58,3 +64,12 @@ en:
       title: Edit coupon
     coupon:
       valid_until: Valid until
+  loyalty_cards:
+    new:
+      title: New loyalty card
+    show:
+      edit: Edit
+      delete: Delete
+      delete_confirmation: Are you sure?
+    edit:
+      title: Edit loyalty card

@@ -6,5 +6,6 @@ class Ability
   def initialize(user)
     can :manage, User, id: user.id
     can :manage, Coupon, user: user
+    can :manage, LoyaltyCard, user: user
   end
 end

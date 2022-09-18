@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_18_135711) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_18_142540) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_135711) do
     t.index ["user_id"], name: "index_coupons_on_user_id"
   end
 
+  create_table "loyalty_cards", force: :cascade do |t|
+    t.string "store"
+    t.string "code"
+    t.string "barcode_type", default: "none"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_loyalty_cards_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,4 +50,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_135711) do
   end
 
   add_foreign_key "coupons", "users"
+  add_foreign_key "loyalty_cards", "users"
 end

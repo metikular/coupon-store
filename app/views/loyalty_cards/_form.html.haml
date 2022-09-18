@@ -1,0 +1,7 @@
+= simple_form_for @loyalty_card do |f|
+  = f.input :code
+  = f.input :barcode_type, include_blank: false
+  = f.input :store
+
+  .form-actions
+    = f.submit

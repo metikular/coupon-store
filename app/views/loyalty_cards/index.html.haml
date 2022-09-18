@@ -1,0 +1,8 @@
+.bg-grey-background.p-4
+  = link_to new_loyalty_card_path, class: 'block' do
+    .flex.gap-4.text-grey-foreground.items-center
+      = heroicon :plus, options: {class: 'w-6 h-6'}
+      = t 'loyalty_cards.new.title'
+
+.p-6.flex.flex-col.gap-4
+  = render @loyalty_cards
