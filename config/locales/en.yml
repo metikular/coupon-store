@@ -8,10 +8,26 @@ en:
       barcode_type:
         none: None
         ean_13: EAN 13
+        code_25_interleaved: Code 25 interleaved
+        code_25_iata: Code 25 IATA
+        code_39: Code 39
+        code_93: Code 93
+        code_128: Code 128
+        bookland: Bookland
+        ean_8: EAN 8
+        upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
     loyalty_card:
       barcode_type:
         none: None
         ean_13: EAN 13
+        code_25_interleaved: Code 25 interleaved
+        code_25_iata: Code 25 IATA
+        code_39: Code 39
+        code_93: Code 93
+        code_128: Code 128
+        bookland: Bookland
+        ean_8: EAN 8
+        upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
   pages:
     home:
       title: Coupon store

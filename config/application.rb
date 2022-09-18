@@ -3,6 +3,15 @@ require_relative "boot"
 require "rails/all"
 
 require "barby/barcode/ean_13"
+require "barby/barcode/code_25_interleaved"
+require "barby/barcode/code_25_iata"
+require "barby/barcode/code_39"
+require "barby/barcode/code_93"
+require "barby/barcode/code_128"
+require "barby/barcode/bookland"
+require "barby/barcode/ean_8"
+require "barby/barcode/upc_supplemental"
+
 require "barby/outputter/svg_outputter"
 
 # Require the gems listed in Gemfile, including any gems
