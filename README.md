@@ -4,6 +4,10 @@ A home for all your coupons and loyalty cards.
 
 ## Setup
 
+```shell
+docker-compose -f docker-compose.example.yml up
+```
+
 ### Instance specific configuration
 
 Add a page for data privacy by creating a file at `app/views/pages/data_privacy.html.haml`.
