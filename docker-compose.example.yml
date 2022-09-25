@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  web:
+    image: coupon-store
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 80 -b '0.0.0.0'"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://coupon_store:SECRET_PASSWORD@db/coupon_store
+    hostname: web
+    restart: unless-stopped
+
+  db:
+    image: postgres:14
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=coupon_store
+      - POSTGRES_PASSWORD=SECRET_PASSWORD

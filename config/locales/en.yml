@@ -33,6 +33,27 @@ en:
       title: Coupon store
       lead: A home for all your coupons and loyalty cards.
       go_to_coupons: Go to coupons
+      features: Features
+      store_coupons:
+        title: Store discounts and coupons
+        description: Overrun by the many discounts and the different apps every store keeps? Keep all the discounts organized in one place in this app. Coupon codes and barcodes are supported.
+      use_coupons:
+        title: Mark coupons as used
+        description: Used a coupon? Mark it as used. Used coupons are hidden, but can still be viewed separately.
+      filter_coupons:
+        title: Automatically filter expired coupons
+        description: Expired coupons are automatically filtered, so that only valid coupons are shown.
+      store_loyalty_cards:
+        title: Store barcode based loyalty cards
+        description: Store loyalty cards with a barcode in the app to have them all in one place. The barcode is displayed in the app and can be scanned on your mobile phone within the store.
+      barcode:
+        title: Barcode to scan coupons and loyalty cards
+        description: Different barcodes are supported for both coupons and loyalty cards.
+      open_source_and_self_hostable: Open source and self hostable
+      self_hostable:
+        introduction_html: Coupon is open source and can be self hosted. You can install it yourself or use <code>docker-compose</code> as desribed below.
+        start_application: 'Start the application:'
+        download: 'Checkout or download %{link}'
   actions:
     sign_in: Sign in
     sign_up: Sign up
