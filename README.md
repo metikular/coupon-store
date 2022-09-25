@@ -18,3 +18,7 @@ bin/dev
 ## Environment variables
 
 - `DEVISE_SENDER_EMAIL`: the email address you are sending emails from
+
+## License
+
+GNU Affero General Public License v3.0
