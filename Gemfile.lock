@@ -252,7 +252,7 @@ GEM
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
-    selenium-webdriver (4.3.0)
+    selenium-webdriver (4.5.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
