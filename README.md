@@ -2,6 +2,8 @@
 
 A home for all your coupons and loyalty cards.
 
+![Screenshots](doc/coupon-screenshots.png)
+
 ## Setup
 
 ```shell
