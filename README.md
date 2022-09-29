@@ -1,6 +1,6 @@
 # Coupon store
 
-A home for all your coupons and loyalty cards.
+A home for all your coupons and loyalty cards. Free to use at https://coupon.metikular.ch. Self-hostable and open-source (see below).
 
 ![Screenshots](doc/coupon-screenshots.png)
 
