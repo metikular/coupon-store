@@ -51,7 +51,8 @@
       %pre.mt-8
         %code docker-compose -f docker-compose.example.yml up
 
-    .md:ml-20.self-center.text-gray-100!= File.read(Rails.root.join('app/assets/images/docker.svg'))
+    .md:ml-20.self-center.text-gray-100
+      != File.read(Rails.root.join('app/assets/images/docker.svg'))
 
 - content_for :footer do
   %footer.bg-grey-background.p-4
