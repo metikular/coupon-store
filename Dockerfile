@@ -6,6 +6,7 @@ WORKDIR /app
 ENV RAILS_ENV=production
 ENV RAILS_LOG_TO_STDOUT=true
 ENV RAILS_SERVE_STATIC_FILES=true
+ENV SECRET_KEY_BASE=tmp
 
 COPY Gemfile /app
 COPY Gemfile.lock /app

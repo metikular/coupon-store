@@ -8,6 +8,7 @@ services:
       - db
     environment:
       - DATABASE_URL=postgres://coupon_store:SECRET_PASSWORD@db/coupon_store
+      - SECRET_KEY_BASE=change-me
     hostname: web
     restart: unless-stopped
 
