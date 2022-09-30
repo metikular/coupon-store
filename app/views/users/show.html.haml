@@ -3,12 +3,12 @@
 .mt-10.flex.justify-between.items-center
   %div
     %label= t '.email_address'
-    .text-grey-foreground= @user.email
+    .text-grey-foreground.dark:text-dark-grey-foreground= @user.email
 
-  .text-grey-foreground
+  .text-grey-foregroun.dark:text-dark-grey-foregroundd
     = link_to edit_user_path do
       = heroicon :pencil, options: {class: 'w-6 h-6'}
 
 .mt-14
-  .text-danger
+  .text-danger.dark:text-dark-danger
     = button_to t('.delete_my_account'), user_path, method: :delete, 'data-confirm': t('.delete_confirmation'), class: 'text danger'

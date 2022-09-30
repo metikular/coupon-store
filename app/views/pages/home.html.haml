@@ -3,7 +3,7 @@
     %div
       %h1= t '.title'
       %p.mt-4.text-xl= t '.lead'
-    = heroicon 'ticket', options: {class: 'text-primary-dark w-24 h-24 non-scaling-stroke', style: 'transform:rotate(325deg);vector-effect:non-scaling-stroke'}
+    = heroicon 'ticket', options: {class: 'text-primary-dark dark:text-dark-primary-dark w-24 h-24 non-scaling-stroke', style: 'transform:rotate(325deg);vector-effect:non-scaling-stroke'}
 
   .text-center.mt-32
     - if user_signed_in?
@@ -14,27 +14,27 @@
 .container.mx-auto.my-32
   %h2= t '.features'
   .grid.grid-cols-3.gap-8.mt-8
-    .bg-gray-50.px-8.py-16.flex.flex-col.gap-4
+    .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'store_coupons.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.store_coupons.title'
       .mt-4.text-center= t '.store_coupons.description'
 
-    .bg-gray-50.px-8.py-16.flex.flex-col.gap-4
+    .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'use_coupons.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.use_coupons.title'
       .mt-4.text-center= t '.use_coupons.description'
 
-    .bg-gray-50.px-8.py-16.flex.flex-col.gap-4
+    .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'filter_coupons.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.filter_coupons.title'
       .mt-4.text-center= t '.filter_coupons.description'
 
-    .bg-gray-50.px-8.py-16.flex.flex-col.gap-4
+    .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'store_loyalty_cards.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.store_loyalty_cards.title'
       .mt-4.text-center= t '.store_loyalty_cards.description'
 
-    .bg-gray-50.px-8.py-16.flex.flex-col.gap-4
+    .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'barcode.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.barcode.title'
       .mt-4.text-center= t '.barcode.description'
@@ -51,11 +51,11 @@
       %pre.mt-8
         %code docker-compose -f docker-compose.example.yml up
 
-    .md:ml-20.self-center.text-gray-100
+    .md:ml-20.self-center.text-gray-100.dark:text-dark-gray-100
       != File.read(Rails.root.join('app/assets/images/docker.svg'))
 
 - content_for :footer do
-  %footer.bg-grey-background.p-4
+  %footer.bg-grey-background.dark:bg-dark-grey-background.p-4
     .grid.gap-3(style="grid-template-columns: 3rem 1fr")
       .flex.justify-center= image_tag 'github.png', style: 'width: 1.5rem; height: 1.5rem'
       .flex.items-center= t 'footer.open_source'
@@ -63,12 +63,12 @@
       .flex.justify-center= image_tag 'docker.svg', style: 'width: 1.5rem; height: 1.5rem'
       .flex.items-center= t 'footer.self_hostable'
 
-      .flex.justify-center= heroicon :heart, variant: :solid, options: {class: 'w-8 h-8'}
+      .flex.justify-center= heroicon :heart, variant: :solid, options: {class: 'w-8 h-8 dark:text-black'}
       .flex.items-center= t 'footer.free_to_use'
 
       .flex.justify-center= image_tag 'metikular.svg', style: 'width: 1.5rem; height: 1.5rem'
       .flex.items-center= t 'footer.made_by_metikular'
 
       - if lookup_context.exists?('data_privacy', 'pages')
-        .pl-3.text-xs.text-grey-foreground(style="grid-column: span 2")
+        .pl-3.text-xs.text-grey-foreground.dark:text-dark-grey-foreground(style="grid-column: span 2")
           = link_to t('footer.data_privacy'), page_path(:data_privacy)

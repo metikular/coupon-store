@@ -11,7 +11,7 @@ class PagesController < PublicController
   end
 
   def page_classes
-    return "bg-white" if params[:id] == "home"
+    return "bg-white dark:bg-dark-white" if params[:id] == "home"
 
     super
   end

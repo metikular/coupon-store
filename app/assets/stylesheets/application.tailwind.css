@@ -4,11 +4,11 @@
 
 @layer components {
   body {
-    @apply text-sm;
+    @apply text-sm text-black dark:text-dark-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-primary-dark font-bold;
+    @apply text-primary-dark dark:text-primary-dark font-bold;
   }
 
   h1 {
@@ -32,7 +32,7 @@
   }
 
   button.primary, .button.primary, input[type="submit"]:not(.text) {
-    @apply inline-block bg-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
+    @apply inline-block bg-primary dark:bg-dark-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
 
     min-width: 10rem;
   }
@@ -42,11 +42,11 @@
   }
 
   button.text, .button.text, input[type="submit"].text {
-    @apply inline-block uppercase text-grey-foreground font-bold;
+    @apply inline-block uppercase text-grey-foreground dark:text-dark-grey-foreground font-bold;
   }
 
   button.text.danger, .button.text.danger {
-    @apply text-danger;
+    @apply text-danger dark:text-dark-danger;
   }
 
   header nav li {
@@ -75,11 +75,11 @@
   }
 
   label {
-    @apply font-bold uppercase text-grey-foreground block;
+    @apply font-bold uppercase text-grey-foreground dark:text-dark-grey-foreground block;
   }
 
   input[type="text"], input[type="email"], input[type="password"], input[type="datetime-local"], input[type="date"] {
-    @apply rounded shadow border-none w-full;
+    @apply rounded shadow border-none w-full bg-white dark:bg-dark-white;
   }
 
   input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
@@ -87,11 +87,11 @@
   }
 
   select {
-    @apply border-none w-full shadow;
+    @apply border-none w-full shadow bg-white dark:bg-dark-white;
   }
 
   .hint {
-    @apply text-sm text-grey-foreground;
+    @apply text-sm text-grey-foreground dark:text-dark-grey-foreground;
   }
 
   label + input, label + select {

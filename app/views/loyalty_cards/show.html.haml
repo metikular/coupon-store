@@ -1,19 +1,19 @@
 .flex.justify-between
   %div
     - if @loyalty_card.store.present?
-      .text-grey-foreground.text-sm.uppercase.font-bold.pb-4= @loyalty_card.store
+      .text-grey-foreground.dark:text-dark-grey-foreground.text-sm.uppercase.font-bold.pb-4= @loyalty_card.store
 
     .font-bold.text-lg= @loyalty_card.code
 
-  .text-grey-foreground
+  .text-grey-foreground.dark:text-dark-grey-foreground
     = link_to loyalty_cards_path do
-      = heroicon :x, options: {class: 'w-6 h-6'}
+      = heroicon 'x-mark', options: {class: 'w-6 h-6'}
 
 .barcode.mt-10.flex.justify-center= barcode_svg(@loyalty_card.code, @loyalty_card.barcode_type)
 
 - content_for :footer do
   .flex.flex-col
-    %hr.border-b-1.border-grey-support
+    %hr.border-b-1.border-grey-support.dark:border-dark-grey-support
     .p-4.flex.flex-wrap.gap-6.text-xs
       = link_to t('.edit'), edit_loyalty_card_path(@loyalty_card), class: 'button text'
       = link_to t('.delete'), loyalty_card_path(@loyalty_card), method: :delete, class: 'button text', 'data-confirm': t('.delete_confirmation')
