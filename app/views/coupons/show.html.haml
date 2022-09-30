@@ -15,7 +15,7 @@
     = link_to coupons_path do
       = heroicon 'x-mark', options: {class: 'w-6 h-6 text-current'}
 
-.barcode.mt-10.flex.justify-center= barcode_svg(@coupon.code, @coupon.barcode_type)
+.barcode.mt-10.flex.justify-center{ class: @coupon.barcode_type == :qr_code ? 'qrcode' : ''}= barcode_svg(@coupon.code, @coupon.barcode_type)
 
 - content_for :footer do
   .flex.flex-col

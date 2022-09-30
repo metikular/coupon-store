@@ -16,6 +16,7 @@ en:
         bookland: Bookland
         ean_8: EAN 8
         upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
+        qr_code: QR code
     loyalty_card:
       barcode_type:
         none: None
@@ -28,6 +29,7 @@ en:
         bookland: Bookland
         ean_8: EAN 8
         upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
+        qr_code: QR code
   pages:
     home:
       title: Coupon store

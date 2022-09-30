@@ -9,7 +9,7 @@
     = link_to loyalty_cards_path do
       = heroicon 'x-mark', options: {class: 'w-6 h-6'}
 
-.barcode.mt-10.flex.justify-center= barcode_svg(@loyalty_card.code, @loyalty_card.barcode_type)
+.barcode.mt-10.flex.justify-center{ class: @coupon.barcode_type == :qr_code ? 'qrcode' : ''}= barcode_svg(@loyalty_card.code, @loyalty_card.barcode_type)
 
 - content_for :footer do
   .flex.flex-col

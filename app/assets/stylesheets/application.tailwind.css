@@ -117,4 +117,8 @@
   .barcode svg {
     @apply w-full max-w-md;
   }
+
+  .barcode.qrcode svg {
+    @apply h-auto;
+  }
 }

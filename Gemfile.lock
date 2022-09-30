@@ -88,6 +88,7 @@ GEM
       capybara (>= 1.0, < 4)
       launchy
     childprocess (4.1.0)
+    chunky_png (1.4.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.6.2)
@@ -219,6 +220,10 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rqrcode (2.1.2)
+      chunky_png (~> 1.0)
+      rqrcode_core (~> 1.0)
+    rqrcode_core (1.2.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -303,6 +308,7 @@ DEPENDENCIES
   propshaft
   puma (~> 5.6)
   rails (~> 7.0.3, >= 7.0.3.1)
+  rqrcode
   rspec-rails
   selenium-webdriver
   simple_form

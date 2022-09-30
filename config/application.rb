@@ -11,6 +11,7 @@ require "barby/barcode/code_128"
 require "barby/barcode/bookland"
 require "barby/barcode/ean_8"
 require "barby/barcode/upc_supplemental"
+require "barby/barcode/qr_code"
 
 require "barby/outputter/svg_outputter"
 

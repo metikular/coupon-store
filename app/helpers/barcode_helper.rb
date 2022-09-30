@@ -1,5 +1,5 @@
 module BarcodeHelper
-  TYPES = %i[none ean_13 code_25_interleaved code_25_iata code_39 code_93 code_128 bookland ean_8 upc_supplemental].freeze
+  TYPES = %i[none ean_13 code_25_interleaved code_25_iata code_39 code_93 code_128 bookland ean_8 upc_supplemental qr_code].freeze
 
   def barcode_svg(barcode, barcode_type)
     return if barcode_type.blank? || barcode_type.to_sym == :none
@@ -28,6 +28,8 @@ module BarcodeHelper
     when :upc_supplemental
       barcode = barcode[0..4]
       Barby::UPCSupplemental.new(barcode)
+    when :qr_code
+      Barby::QrCode.new(barcode)
     end
 
     code&.to_svg&.html_safe
