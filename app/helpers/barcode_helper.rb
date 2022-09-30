@@ -3,6 +3,7 @@ module BarcodeHelper
 
   def barcode_svg(barcode, barcode_type)
     return if barcode_type.blank? || barcode_type.to_sym == :none
+    barcode = barcode.gsub(/\s+/, "")
 
     code = case barcode_type.to_sym
     when :ean_13
