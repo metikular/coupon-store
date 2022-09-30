@@ -12,3 +12,6 @@
 .mt-14
   .text-danger.dark:text-dark-danger
     = button_to t('.delete_my_account'), user_path, method: :delete, 'data-confirm': t('.delete_confirmation'), class: 'text danger'
+
+.mt-14
+  = button_to t('.logout'), destroy_user_session_path, method: :delete, class: 'button primary'
