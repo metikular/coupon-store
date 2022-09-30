@@ -14,7 +14,9 @@ class LoyaltyCardsController < ApplicationController
   end
 
   def create
-    if @loyalty_card.save
+    @preview = params[:commit] == "preview"
+
+    if !@preview && @loyalty_card.save
       redirect_to loyalty_cards_path
     else
       render :new
@@ -25,7 +27,9 @@ class LoyaltyCardsController < ApplicationController
   end
 
   def update
-    if @loyalty_card.update(loyalty_card_params)
+    @preview = params[:commit] == "preview"
+
+    if !@preview && @loyalty_card.update(loyalty_card_params)
       redirect_to @loyalty_card
     else
       render :edit

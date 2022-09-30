@@ -1,0 +1,21 @@
+.modal(data-barcode-preview-target="modal")
+  .flex.justify-end.pb-4
+    %button{'data-action': 'barcode-preview#close'}
+      = heroicon 'x-mark', options: {class: 'w-6 h-6 text-current'}
+
+  .flex.flex-col.gap-4
+    - BarcodeHelper::TYPES.without(:none).each do |barcode_type|
+      .rounded.bg-white.dark:bg-dark-white.shadow.p-4.pr-1.flex.justify-between
+        .flex.flex-col.gap-2
+          - barcode = capture do
+            = barcode_svg object.code, barcode_type
+          - if barcode.present?
+            .barcode.grow{class: barcode_type == :qr_code ? 'qrcode' : ''}= barcode
+          - else
+            .text-danger.dark:text-dark-danger= t '.code_invalid'
+          = t barcode_type, scope: 'enumerize.coupon.barcode_type'
+
+        .text-grey-foreground.dark:text-dark-grey-foreground.self-center
+          - if barcode.present?
+            %button.block.p-2.hover:rounded-full.hover:bg-grey-background.dark:hover:bg-dark-grey-background{'data-action': 'barcode-preview#choose', 'data-barcode-type': barcode_type}
+              = heroicon 'chevron-right', options: {class: 'w-6 h-6'}

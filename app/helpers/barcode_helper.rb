@@ -33,5 +33,7 @@ module BarcodeHelper
     end
 
     code&.to_svg&.html_safe
+  rescue
+    ""
   end
 end

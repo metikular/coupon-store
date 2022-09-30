@@ -116,9 +116,15 @@
 
   .barcode svg {
     @apply w-full max-w-md;
+
+    min-width: 20rem;
   }
 
   .barcode.qrcode svg {
     @apply h-auto;
+  }
+
+  .modal {
+    @apply fixed top-0 left-0 p-6 w-full h-full bg-grey-page dark:bg-dark-grey-page overflow-scroll;
   }
 }

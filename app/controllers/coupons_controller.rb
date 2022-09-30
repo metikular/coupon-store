@@ -18,7 +18,9 @@ class CouponsController < ApplicationController
   end
 
   def create
-    if @coupon.save
+    @preview = params[:commit] == "preview"
+
+    if !@preview && @coupon.save
       redirect_to coupons_path
     else
       render :new
@@ -29,7 +31,9 @@ class CouponsController < ApplicationController
   end
 
   def update
-    if @coupon.update(coupon_params)
+    @preview = params[:commit] == "preview"
+
+    if !@preview && @coupon.update(coupon_params)
       redirect_to @coupon
     else
       render :edit

@@ -104,6 +104,9 @@ en:
       title: Edit coupon
     coupon:
       valid_until: Valid until
+    form:
+      help_choose: Help me choose the correct barcode
+      code_invalid: Code is not valid for this barcode type
   loyalty_cards:
     new:
       title: New loyalty card
@@ -113,3 +116,6 @@ en:
       delete_confirmation: Are you sure?
     edit:
       title: Edit loyalty card
+    form:
+      help_choose: Help me choose the correct barcode
+      code_invalid: Code is not valid for this barcode type

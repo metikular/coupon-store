@@ -1,9 +1,15 @@
-= simple_form_for @coupon do |f|
-  = f.input :code
-  = f.input :barcode_type, include_blank: false
-  = f.input :store
-  = f.input :description
-  = f.input :valid_until, html5: true
+%div{'data-controller': @preview ? "barcode-preview" : ""}
+  = simple_form_for @coupon do |f|
+    = f.input :code
+    = f.input :barcode_type, include_blank: false, input_html: {'data-barcode-preview-target': 'input'}
+    %button.text.mt-2(type="submit" name="commit" value="preview")
+      = t('.help_choose')
+    = f.input :store
+    = f.input :description
+    = f.input :valid_until, html5: true
 
-  .form-actions
-    = f.submit
+    .form-actions
+      = f.submit
+
+  - if @preview
+    = render partial: 'barcode_preview_modal', locals: {object: @coupon}
