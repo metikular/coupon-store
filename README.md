@@ -8,7 +8,7 @@ A home for all your coupons and loyalty cards. Free to use at https://coupon.met
 
 - Store coupons and discounts
 - Store loyalty cards
-- Several types of barcodes supported for coupons and loyalty cards
+- Several types of barcodes and QR codes supported for coupons and loyalty cards
 - Dark mode
 
 ## Setup
