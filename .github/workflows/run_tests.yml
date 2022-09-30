@@ -1,0 +1,50 @@
+name: Run all tests
+
+on: [push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend-services:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14-alpine
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v3
+
+      - name: Bundle install and cache result
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run Ruby lint
+        run: bundle exec standardrb
+
+      - name: Run rspec
+        run: |
+          export DATABASE_URL=postgresql://postgres:postgres@localhost/coupon_store_test
+          bundle exec rails db:create
+          bundle exec rails db:schema:load >/dev/null
+          RAILS_ENV=test bundle exec rails assets:precompile
+          bundle exec rails spec
+
+      - name: Upload screenshots of failures
+        uses: actions/upload-artifact@v3.1.0
+        if: ${{ failure() }}
+        with:
+          name: capybara-screenshots-${{ github.sha }}
+          path: tmp/capybara/screenshot_*
+          retention-days: 30
