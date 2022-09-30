@@ -17,3 +17,8 @@ services:
     environment:
       - POSTGRES_USER=coupon_store
       - POSTGRES_PASSWORD=SECRET_PASSWORD
+    volumes:
+      - coupon-store-database:/var/lib/postgresql/data
+
+volumes:
+  coupon-store-database:
