@@ -57,17 +57,29 @@
 - content_for :footer do
   %footer.bg-grey-background.dark:bg-dark-grey-background.p-4
     .grid.gap-3(style="grid-template-columns: 3rem 1fr")
-      .flex.justify-center= image_tag 'github.png', style: 'width: 1.5rem; height: 1.5rem'
-      .flex.items-center= t 'footer.open_source'
+      .flex.justify-center
+        = external_link_to '', 'https://github.com/metikular/coupon-store' do
+          = image_tag 'github.png', style: 'width: 1.5rem; height: 1.5rem'
+      .flex.items-center
+        = external_link_to '', 'https://github.com/metikular/coupon-store' do
+          = t 'footer.open_source'
 
-      .flex.justify-center= image_tag 'docker.svg', style: 'width: 1.5rem; height: 1.5rem'
-      .flex.items-center= t 'footer.self_hostable'
+      .flex.justify-center
+        = external_link_to '', 'https://hub.docker.com/r/metikular/coupon-store' do
+          = image_tag 'docker.svg', style: 'width: 1.5rem; height: 1.5rem'
+      .flex.items-center
+        = external_link_to '', 'https://hub.docker.com/r/metikular/coupon-store' do
+          = t 'footer.self_hostable'
 
       .flex.justify-center= heroicon :heart, variant: :solid, options: {class: 'w-8 h-8 dark:text-black'}
       .flex.items-center= t 'footer.free_to_use'
 
-      .flex.justify-center= image_tag 'metikular.svg', style: 'width: 1.5rem; height: 1.5rem'
-      .flex.items-center= t 'footer.made_by_metikular'
+      .flex.justify-center
+        = external_link_to '', 'https://metikular.ch' do
+          = image_tag 'metikular.svg', style: 'width: 1.5rem; height: 1.5rem'
+      .flex.items-center
+        = external_link_to '', 'https://metikular.ch' do
+          = t 'footer.made_by_metikular'
 
       - if lookup_context.exists?('data_privacy', 'pages')
         .pl-3.text-xs.text-grey-foreground.dark:text-dark-grey-foreground(style="grid-column: span 2")
