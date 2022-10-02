@@ -84,3 +84,7 @@
       - if lookup_context.exists?('data_privacy', 'pages')
         .pl-3.text-xs.text-grey-foreground.dark:text-dark-grey-foreground(style="grid-column: span 2")
           = link_to t('footer.data_privacy'), page_path(:data_privacy)
+
+      - if ENV["CODE_VERSION"].present?
+        .pl-3.text-xs.text-grey-foreground.dark:text-dark-grey-foreground(style="grid-column: span 2")
+          = code_version_from_tag ENV["CODE_VERSION"]
