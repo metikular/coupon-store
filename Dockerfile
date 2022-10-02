@@ -12,6 +12,9 @@ COPY Gemfile /app
 COPY Gemfile.lock /app
 RUN bundle config set --local without 'development test'; bundle install
 
+ARG CODE_VERSION
+ENV CODE_VERSION=${CODE_VERSION:-development}
+
 COPY . /app
 RUN bin/rails assets:precompile
 
