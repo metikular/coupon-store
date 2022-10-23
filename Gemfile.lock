@@ -272,6 +272,7 @@ GEM
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    sqlite3 (1.5.3-x86_64-linux)
     standard (1.16.1)
       rubocop (= 1.35.1)
       rubocop-performance (= 1.14.3)
@@ -338,6 +339,7 @@ DEPENDENCIES
   rspec-rails
   selenium-webdriver
   simple_form
+  sqlite3
   standard
   stimulus-rails
   tailwindcss-rails

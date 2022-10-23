@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  web:
+    image: metikular/coupon-store
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 80 -b '0.0.0.0'"
+    environment:
+      - DATABASE_URL=sqlite3:db/data/coupons.sqlite3
+      - SECRET_KEY_BASE=change-me
+    hostname: web
+    restart: unless-stopped
+    volumes:
+      - coupon-store-database:/app/db/data
+
+volumes:
+  coupon-store-database:

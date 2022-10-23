@@ -13,8 +13,16 @@ A home for all your coupons and loyalty cards. Free to use at https://coupon.met
 
 ## Setup
 
+Using a PostgreSQL database:
+
 ```shell
 docker-compose -f docker-compose.example.yml up
+```
+
+Using a SQLite database:
+
+```shell
+docker-compose -f docker-compose.sqlite.yml up
 ```
 
 ### Instance specific configuration
@@ -31,6 +39,13 @@ bin/dev
 ## Environment variables
 
 - `DEVISE_SENDER_EMAIL`: the email address you are sending emails from
+- `DATABASE_URL`: allows to set the database. PostgreSQL or SQLite3 are supported.
+
+    Example for SQLite3:
+
+    ```
+    DATABASE_URL=sqlite3:db/development.sqlite3
+    ```
 
 ## License
 
