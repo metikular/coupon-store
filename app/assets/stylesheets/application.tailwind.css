@@ -127,4 +127,8 @@
   .modal {
     @apply fixed top-0 left-0 p-6 w-full h-full bg-grey-page dark:bg-dark-grey-page overflow-scroll;
   }
+
+  .max-svg-width svg {
+    max-width: 100%;
+  }
 }

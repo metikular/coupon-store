@@ -13,7 +13,7 @@
 
 .container.mx-auto.my-32
   %h2= t '.features'
-  .grid.grid-cols-3.gap-8.mt-8
+  .grid.md:grid-cols-3.gap-8.mt-8
     .bg-gray-50.dark:bg-dark-gray-50.px-8.py-16.flex.flex-col.gap-4
       = image_tag 'store_coupons.svg', class: 'h-24 mt-8 self-center'
       .mt-8.text-center.text-xl= t '.store_coupons.title'
@@ -51,7 +51,7 @@
       %pre.mt-8
         %code docker-compose -f docker-compose.example.yml up
 
-    .md:ml-20.self-center.text-gray-100.dark:text-dark-gray-100
+    .md:ml-20.self-center.text-gray-100.dark:text-dark-gray-100.max-svg-width
       != File.read(Rails.root.join('app/assets/images/docker.svg'))
 
 - content_for :footer do
