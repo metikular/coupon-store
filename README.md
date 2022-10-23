@@ -29,6 +29,14 @@ docker-compose -f docker-compose.sqlite.yml up
 
 Add a page for data privacy by creating a file at `app/views/pages/data_privacy.html.haml`.
 
+### Backups
+
+All data is stored in the database. It is thus sufficient to backup the database.
+
+If PostgreSQL is used: use `pg_dump` to backup the database specified in `DATABASE_URL`.
+
+If SQLite is used: backup the `.sqlite3` file specified in `DATABASE_URL`.
+
 ## Development
 
 ```shell
