@@ -35,7 +35,7 @@ All data is stored in the database. It is thus sufficient to backup the database
 
 If PostgreSQL is used: use `pg_dump` to backup the database specified in `DATABASE_URL`.
 
-If SQLite is used: backup the `.sqlite3` file specified in `DATABASE_URL`.
+If SQLite is used: backup the `.sqlite3` file specified in `DATABASE_URL`. If a relative path is used to specify the database file, it is relative to the directory `/app`.
 
 ## Development
 
