@@ -112,7 +112,7 @@ GEM
       railties (>= 5.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    haml (6.0.7)
+    haml (6.0.8)
       temple (>= 0.8.2)
       thor
       tilt
@@ -280,7 +280,7 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.16-x86_64-linux)
       railties (>= 6.0.0)
-    temple (0.8.2)
+    temple (0.9.1)
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.0)
