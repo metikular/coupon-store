@@ -2,3 +2,6 @@ en:
   gift_cards:
     balance_component:
       balance: Balance
+
+  barcode_scanner_component:
+    title: Scan code

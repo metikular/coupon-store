@@ -1,6 +1,7 @@
 @import 'components/forms';
 @import 'components/search';
 @import 'components/user_menu';
+@import 'components/barcode_scanner';
 
 @tailwind base;
 @tailwind components;

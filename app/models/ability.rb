@@ -11,5 +11,6 @@ class Ability
     can :manage, GiftCard, user: user
     can :manage, Charge, {gift_card: {user:}}
     can :manage, :search
+    can :read, :barcode
   end
 end

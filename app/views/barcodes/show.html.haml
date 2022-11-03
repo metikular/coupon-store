@@ -1,0 +1,11 @@
+= turbo_frame_tag @id do
+  .rounded.bg-white.dark:bg-dark-white.shadow.p-4.pr-1.flex.justify-between(data-code=@code data-type=@type)
+    %div
+      .text-grey-foreground.dark:text-dark-grey-foreground.text-sm.uppercase.font-bold.pb-4= @type
+
+      .barcode.flex.justify-center{ class: @type == :qr_code ? 'qrcode' : ''}= barcode_svg(@code, @type)
+      .font-bold.text-lg= @code
+
+    .text-grey-foreground.dark:text-dark-grey-foreground.self-center
+      %button.block.p-2.hover:rounded-full.hover:bg-grey-background.dark:hover:bg-dark-grey-background(type="button" data-action="barcode-scanner#choose")
+        = heroicon 'chevron-right', options: {class: 'w-6 h-6'}

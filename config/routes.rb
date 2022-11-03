@@ -16,5 +16,6 @@ Rails.application.routes.draw do
       resource :balance, only: %i[edit update]
     end
     resource :search, only: :show
+    resource :barcodes, only: :show
   end
 end

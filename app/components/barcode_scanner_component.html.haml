@@ -1,0 +1,10 @@
+.modal(data-barcode-scanner-target="modal")
+  %h2= t '.title'
+
+  .flex.justify-end.pb-4
+    %button(data-action="barcode-scanner#deactivate")
+      = helpers.heroicon 'x-mark', options: {class: 'w-6 h-6 text-current'}
+
+  .flex.flex-col.gap-4
+    %div(data-barcode-scanner-target="camera")
+    .flex.flex-col.gap-4(data-barcode-scanner-target="list")

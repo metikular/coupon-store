@@ -1,6 +1,8 @@
-%div{'data-controller': @preview ? "barcode-preview" : ""}
+%div{'data-controller': @preview ? "barcode-preview barcode-scanner" : "barcode-scanner", 'data-barcode-scanner-barcode-url-value': barcodes_path}
   = simple_form_for @coupon do |f|
     = f.input :code
+    %button.text.mt-2(type="button" data-action="barcode-scanner#activate")
+      = t('.scan')
     = f.input :barcode_type, include_blank: false, input_html: {'data-barcode-preview-target': 'input'}
     %button.text.mt-2(type="submit" name="commit" value="preview")
       = t('.help_choose')
@@ -13,3 +15,5 @@
 
   - if @preview
     = render partial: 'barcode_preview_modal', locals: {object: @coupon}
+
+  = render BarcodeScannerComponent.new

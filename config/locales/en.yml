@@ -108,6 +108,7 @@ en:
     coupon:
       valid_until: Valid until
     form:
+      scan: Scan code
       help_choose: Help me choose the correct barcode
       code_invalid: Code is not valid for this barcode type
   loyalty_cards:
