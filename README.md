@@ -55,6 +55,10 @@ bin/dev
     DATABASE_URL=sqlite3:db/development.sqlite3
     ```
 
+## Similar projects
+
+- [Catima](https://catima.app), Android App
+
 ## License
 
 GNU Affero General Public License v3.0
