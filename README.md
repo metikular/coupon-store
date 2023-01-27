@@ -25,6 +25,8 @@ Using a SQLite database:
 docker-compose -f docker-compose.sqlite.yml up
 ```
 
+The default port of the running webserver is `80`.
+
 ### Instance specific configuration
 
 Add a page for data privacy by creating a file at `app/views/pages/data_privacy.html.haml`.
