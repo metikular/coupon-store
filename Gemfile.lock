@@ -276,7 +276,7 @@ GEM
     simple_form (5.2.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    sqlite3 (1.6.0-x86_64-linux)
+    sqlite3 (1.6.1-x86_64-linux)
     standard (1.24.3)
       language_server-protocol (~> 3.17.0.2)
       rubocop (= 1.44.1)
