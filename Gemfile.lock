@@ -190,7 +190,7 @@ GEM
       rack
       railties (>= 7.0.0)
     public_suffix (5.0.0)
-    puma (6.1.1)
+    puma (6.2.0)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
@@ -338,7 +338,7 @@ DEPENDENCIES
   kaminari
   pg (~> 1.4)
   propshaft
-  puma (~> 6.1)
+  puma (~> 6.2)
   rails (~> 7.0.4)
   rqrcode
   rspec-rails
