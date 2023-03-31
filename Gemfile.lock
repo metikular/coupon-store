@@ -283,7 +283,7 @@ GEM
       rubocop-performance (~> 1.16.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.0.25-x86_64-linux)
+    tailwindcss-rails (2.0.26-x86_64-linux)
       railties (>= 6.0.0)
     temple (0.9.1)
     thor (1.2.1)
