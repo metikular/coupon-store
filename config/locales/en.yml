@@ -17,6 +17,7 @@ en:
         ean_8: EAN 8
         upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
         qr_code: QR code
+        upc_12: UPC 12
     loyalty_card:
       barcode_type:
         none: None
@@ -30,6 +31,7 @@ en:
         ean_8: EAN 8
         upc_supplemental: UPC/EAN supplemental, 2 & 5 digits
         qr_code: QR code
+        upc_12: UPC 12
   pages:
     home:
       title: Coupon store
