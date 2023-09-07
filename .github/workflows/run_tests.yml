@@ -42,7 +42,7 @@ jobs:
           bundle exec rails spec
 
       - name: Upload screenshots of failures
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3.1.3
         if: ${{ failure() }}
         with:
           name: capybara-screenshots-${{ github.sha }}
