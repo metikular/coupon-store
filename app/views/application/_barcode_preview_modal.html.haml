@@ -8,7 +8,7 @@
       .rounded.bg-white.dark:bg-dark-white.shadow.p-4.pr-1.flex.justify-between
         .flex.flex-col.gap-2
           - barcode = capture do
-            = barcode_svg object.code, barcode_type
+            - barcode_svg object.code, barcode_type
           - if barcode.present?
             .barcode.grow{class: barcode_type == :qr_code ? 'qrcode' : ''}= barcode
           - else
