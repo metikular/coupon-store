@@ -78,7 +78,7 @@ GEM
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    barby (0.6.8)
+    barby (0.6.9)
     base64 (0.2.0)
     bcrypt (3.1.19)
     bigdecimal (3.1.4)
