@@ -307,7 +307,7 @@ GEM
     simple_form (5.3.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    sqlite3 (1.6.9-x86_64-linux)
+    sqlite3 (2.0.1-x86_64-linux-gnu)
     standard (1.36.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
