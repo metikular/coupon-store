@@ -1,8 +1,4 @@
 en:
-  activerecord:
-    attributes:
-      coupon:
-        barcode_type: Barcode type
   enumerize:
     coupon:
       barcode_type:

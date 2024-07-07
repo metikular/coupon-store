@@ -1,0 +1,10 @@
+.grow.flex.items-center
+  .border-solid.border-b.border-grey-foreground.grow
+    = simple_form_for @search || Forms::Search.new, url: search_path, method: :get do |f|
+      = hidden_field_tag :type, @search&.type
+      .grid
+        %div(style="grid-column: 1; grid-row: 1")
+          .h-full.grow.flex.items-end.pb-3
+            = heroicon 'magnifying-glass', options: {class: 'w-4 h-4 text-grey-foreground'}
+        %div(style="grid-column: 1; grid-row: 1")
+          = text_field_tag :q, params[:q]

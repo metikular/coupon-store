@@ -1,3 +1,5 @@
+@import 'components/search';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,0 +1,12 @@
+%h1= t '.title'
+
+.mt-6.pb-0.flex.gap-4
+  = link_to t('.result_count', type: Coupon.model_name.human(count: 2), count: @search.count('coupon')), url_for(type: 'coupon', q: @search.q), class: "button text toggle #{@search.type == 'coupon' ? 'active' : ''}"
+  = link_to t('.result_count', type: LoyaltyCard.model_name.human(count: 2), count: @search.count('loyalty_card')), url_for(type: 'loyalty_card', q: @search.q), class: "button text toggle #{@search.type == 'loyalty_card' ? 'active' : ''}"
+
+.mt-6.flex.flex-col.gap-4
+  - @search.call.each do |search_result|
+    = render search_result
+
+  - if @search.count.zero?
+    = t '.no_results'

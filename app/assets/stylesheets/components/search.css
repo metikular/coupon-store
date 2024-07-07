@@ -1,0 +1,7 @@
+#new_search {
+  @apply flex flex-col justify-center;
+}
+
+#new_search [name="q"] {
+  @apply bg-transparent border-0 text-grey-foreground shadow-none pl-6 rounded-none outline-none focus:border-b-2;
+}

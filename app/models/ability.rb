@@ -7,5 +7,6 @@ class Ability
     can :manage, User, id: user.id
     can :manage, Coupon, user: user
     can :manage, LoyaltyCard, user: user
+    can :manage, :search
   end
 end

@@ -1,0 +1,6 @@
+en:
+  searches:
+    show:
+      title: Search results
+      result_count: '%{type} (%{count})'
+      no_results: No results.

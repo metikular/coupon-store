@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      coupon:
+        one: Coupon
+        other: Coupons
+      loyalty_card:
+        one: Loyalty card
+        other: Loyalty cards
+
+    attributes:
+      coupon:
+        barcode_type: Barcode type
