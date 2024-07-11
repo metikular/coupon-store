@@ -1,0 +1,16 @@
+#user-menu {
+  @apply grid p-6 gap-4;
+
+  grid-template-areas:
+    "menu menu"
+    "search user";
+  grid-template-columns: 1fr auto;
+}
+
+@media(min-width: 768px) {
+  #user-menu {
+    grid-template-areas:
+      "menu search user";
+    grid-template-columns: auto 1fr auto;
+  }
+}

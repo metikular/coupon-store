@@ -1,4 +1,5 @@
 @import 'components/search';
+@import 'components/user_menu';
 
 @tailwind base;
 @tailwind components;

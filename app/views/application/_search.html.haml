@@ -1,4 +1,4 @@
-.grow.flex.items-center
+.grow.flex.items-center(style="grid-area: search")
   .border-solid.border-b.border-grey-foreground.grow
     = simple_form_for @search || Forms::Search.new, url: search_path, method: :get do |f|
       = hidden_field_tag :type, @search&.type
