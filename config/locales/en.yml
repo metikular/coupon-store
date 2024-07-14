@@ -117,3 +117,10 @@ en:
     form:
       help_choose: Help me choose the correct barcode
       code_invalid: Code is not valid for this barcode type
+
+  coupon:
+    expiration:
+      title:
+        default: "Coupon expires soon: {{ store }}"
+      body:
+        default: "{{ description }}\r\n{{ url }}"

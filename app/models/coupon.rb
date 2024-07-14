@@ -11,4 +11,5 @@ class Coupon < ApplicationRecord
   scope :used, -> { where(used: true) }
   scope :valid, -> { where(used: false).where("valid_until IS NULL OR valid_until >= ?", Time.zone.now) }
   scope :expired, -> { where("valid_until < ?", Time.zone.now) }
+  scope :expires_in, ->(days) { where(valid_until: (Time.zone.now + days.days).all_day) }
 end

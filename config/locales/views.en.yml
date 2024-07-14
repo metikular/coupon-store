@@ -4,3 +4,28 @@ en:
       title: Search results
       result_count: '%{type} (%{count})'
       no_results: No results.
+
+  users:
+    show:
+      expiration_notification:
+        title: Expiration notification
+        channels:
+          one: 'Active on %{count} channel'
+          other: 'Active on %{count} channels'
+        deactivated: Notifications are disabled
+
+    expiration_notifications:
+      edit:
+        title: Expiration notifications
+        explanation_html: You can let yourself be notified when a coupon expires soon. The notifications are sent using <a href="https://github.com/caronc/apprise" target="_blank">Apprise</a>, which supports many notification channels via a URL. Visit <a href="https://github.com/caronc/apprise?tab=readme-ov-file#supported-notifications" target="_blank">the apprise documentation</a> to understand how the URLs have to be formed.
+        template_variables_html: |
+          <p>The notification may include variables which are substituted with the data from the coupon expiring soon. The following variables may be used. Make sure you include the double brackets as shown below.</p>
+          <ul>
+            <li><code>{{ store }}</code>: The store this coupon may be used for</li>
+            <li><code>{{ code }}</code>: The code of this coupon required to redeem it</li>
+            <li><code>{{ description }}</code>: The description you gave to this coupon</li>
+            <li><code>{{ valid_until }}</code>: The date the coupon expires on</li>
+            <li><code>{{ url }}</code>: A URL to the coupon here in the coupon store</li>
+          </ul>
+        remove: Remove
+        add: Add another channel

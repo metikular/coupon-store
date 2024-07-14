@@ -11,3 +11,9 @@ en:
     attributes:
       coupon:
         barcode_type: Barcode type
+
+      user:
+        expiration_notification_days: Days before the coupon expires
+        expiration_notification_title: Notification title
+        expiration_notification_body: Notification body
+        expiration_notification_channels: Apprise channels

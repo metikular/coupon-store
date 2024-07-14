@@ -10,3 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Search field to search for coupons and loyalty cards
+- Notifications when a coupon is soon to expire. Configure them in your user's profile.
+
+### Changed
+
+- You now need to set the `HOST` environment variable to your domain name. For example `coupons.example.com`.

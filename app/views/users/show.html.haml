@@ -9,6 +9,19 @@
     = link_to edit_user_path do
       = heroicon :pencil, options: {class: 'w-6 h-6'}
 
+.mt-10.flex.justify-between.items-center
+  %div
+    %label= t '.expiration_notification.title'
+    .text-grey-foreground.dark:text-dark-grey-foreground
+      - if @user.has_notification_settings?
+        = t '.expiration_notification.channels', count: @user.expiration_notification_channels.count
+      - else
+        = t '.expiration_notification.deactivated'
+
+  .text-grey-foregroun.dark:text-dark-grey-foregroundd
+    = link_to edit_user_expiration_notification_path do
+      = heroicon :pencil, options: {class: 'w-6 h-6'}
+
 .mt-14
   .text-danger.dark:text-dark-danger
     = button_to t('.delete_my_account'), user_path, method: :delete, 'data-confirm': t('.delete_confirmation'), class: 'text danger'

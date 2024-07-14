@@ -29,3 +29,8 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    hints:
+      user:
+        expiration_notification_days: The notification is sent this amount of days before the coupon expires. Leave empty if you do not want to receive notifications.
+        expiration_notification_title: Leave empty for the default. May include template variables.
+        expiration_notification_body: Leave empty for the default. May include template variables.

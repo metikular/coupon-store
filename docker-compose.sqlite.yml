@@ -6,6 +6,7 @@ services:
     environment:
       - DATABASE_URL=sqlite3:db/data/coupons.sqlite3
       - SECRET_KEY_BASE=change-me
+      - HOST=coupons.example.com
     hostname: web
     restart: unless-stopped
     volumes:

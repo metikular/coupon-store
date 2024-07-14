@@ -1,0 +1,29 @@
+%h1= t '.title'
+
+%p= t '.explanation_html'
+%p.mt-4= t '.template_variables_html'
+
+= simple_form_for @user, url: user_expiration_notification_path do |f|
+  = f.input :expiration_notification_days, input_html: { class: 'w-full' }
+  = f.input :expiration_notification_title
+  = f.input :expiration_notification_body
+  .mt-6= f.label :expiration_notification_channels
+  .mt-2(data-controller="add-element")
+    .flex.flex-col.gap-2(data-add-element-target="append")
+      .hidden= text_field_tag 'user[expiration_notification_channels][]'
+
+      - @user.expiration_notification_channels.each do |channel|
+        .flex.gap-2(data-controller="remove-element")
+          = text_field_tag 'user[expiration_notification_channels][]', channel
+          %button(type="button" data-action="remove-element#removeSelf")= t '.remove'
+
+      %template(data-add-element-target="template")
+        .flex.gap-2(data-controller="remove-element")
+          = text_field_tag 'user[expiration_notification_channels][]'
+          %button(type="button" data-action="remove-element#removeSelf")= t '.remove'
+
+    .mt-2
+      %button(type="button" data-action="add-element#add")= t '.add'
+
+  .form-actions
+    = f.submit
