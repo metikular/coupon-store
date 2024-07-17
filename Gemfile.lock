@@ -206,7 +206,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.25.1)
-    parser (3.3.3.0)
+    parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
     pg (1.5.6)
@@ -269,7 +269,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rqrcode (2.2.0)
       chunky_png (~> 1.0)
@@ -326,7 +326,7 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
     sqlite3 (1.6.9-x86_64-linux)
-    standard (1.39.1)
+    standard (1.39.2)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.64.0)
