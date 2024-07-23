@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby file: '.ruby-version'
+ruby file: ".ruby-version"
 
 gem "barby"
 gem "bootsnap", require: false
