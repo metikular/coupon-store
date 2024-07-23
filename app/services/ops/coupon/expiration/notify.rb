@@ -43,18 +43,21 @@ module Ops
           title = Liquid::Template
             .parse(user.expiration_notification_title.presence || I18n.t("coupon.expiration.title.default"))
             .render(template_options)
-          title = Shellwords.escape(title)
 
           body = Liquid::Template
             .parse(user.expiration_notification_body.presence || I18n.t("coupon.expiration.body.default"))
             .render(template_options)
-          body = Shellwords.escape(body)
 
-          channels = user
-            .expiration_notification_channels
-            .map { |channel| Shellwords.escape(channel) }
+          channels = user.expiration_notification_channels
 
-          "/usr/bin/apprise --title #{title} --body #{body} #{channels.join(" ")}"
+          [
+            "/usr/bin/apprise",
+            "--title",
+            title,
+            "--body",
+            body,
+            *channels
+          ]
         end
       end
     end
