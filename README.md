@@ -60,6 +60,7 @@ bin/dev
 ## Similar projects
 
 - [Catima](https://catima.app), Android App
+- [VoucherVault](https://github.com/l4rm4nd/VoucherVault), web application using Python/Django
 
 ## License
 
