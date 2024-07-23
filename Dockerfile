@@ -8,8 +8,7 @@ ENV RAILS_LOG_TO_STDOUT=true
 ENV RAILS_SERVE_STATIC_FILES=true
 ENV SECRET_KEY_BASE=tmp
 
-COPY Gemfile /app
-COPY Gemfile.lock /app
+ADD Gemfile Gemfile.lock .ruby-version /app/
 RUN bundle config set --local without 'development test'; bundle install
 
 ARG CODE_VERSION
