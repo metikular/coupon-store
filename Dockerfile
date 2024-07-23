@@ -1,6 +1,7 @@
 FROM ruby:3.3.4
 
-RUN apt-get update -qq && apt-get install -y postgresql-client apprise
+RUN apt-get update -qq && apt-get install -y postgresql-client python3-full
+RUN python3 -m venv /opt/apprise && /opt/apprise/bin/pip install apprise && ln -s /opt/apprise/bin/apprise /usr/bin/apprise
 
 WORKDIR /app
 ENV RAILS_ENV=production
