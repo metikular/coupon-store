@@ -1,0 +1,3 @@
+/usr/bin/apprise -vvv --title title --body test 'rockets://66074cd6264865522eb3c21b:38NZgG5FxxOLVm4iD3UFTWDqNCYHzjKvvXPLOb5__Rw@chat.metikular.ch/#apprise?avatar=false'
+
+works locally, but not in docker container. do we have IP restriction or something?
