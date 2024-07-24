@@ -18,7 +18,7 @@ module Ops
           return unless user.has_notification_settings?
 
           I18n.with_locale user.locale do
-            system command
+            system(*command)
           end
         end
 
