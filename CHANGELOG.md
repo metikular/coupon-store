@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-rc1] - 2024-07-26
+
 ### Added
 
 - Search field to search for coupons and loyalty cards
