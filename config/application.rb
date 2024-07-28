@@ -43,7 +43,11 @@ module CouponStore
     I18n.available_locales = %i[en]
     I18n.default_locale = :en
 
-    config.action_mailer.default_url_options = {host: ENV.fetch("HOST", "localhost"), port: 443}
+    config.action_mailer.default_url_options = {
+      host: ENV.fetch("HOST", "localhost"),
+      port: 443,
+      protocol: :https
+    }
     config.action_controller.default_url_options = config.action_mailer.default_url_options
   end
 end
