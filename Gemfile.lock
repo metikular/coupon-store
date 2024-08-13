@@ -100,7 +100,7 @@ GEM
       capybara (>= 1.0, < 4)
       launchy
     chunky_png (1.4.0)
-    concurrent-ruby (1.3.3)
+    concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
@@ -211,7 +211,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.7)
-    propshaft (0.9.0)
+    propshaft (0.9.1)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
