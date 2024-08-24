@@ -406,7 +406,7 @@ DEPENDENCIES
   rspec-rails
   selenium-webdriver
   simple_form
-  solid_queue (~> 0.6.0)
+  solid_queue
   sqlite3 (~> 1.4)
   standard
   stimulus-rails
