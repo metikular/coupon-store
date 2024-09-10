@@ -205,7 +205,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.8)
-    propshaft (0.9.1)
+    propshaft (1.0.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
