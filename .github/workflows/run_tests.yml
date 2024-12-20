@@ -7,8 +7,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  backend-services:
+  tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        database_url:
+          - postgresql://postgres:postgres@localhost/coupon_store_test
+          - sqlite3:db/data/coupons.sqlite3
+
     services:
       postgres:
         image: postgres:16-alpine
@@ -21,6 +27,7 @@ jobs:
           POSTGRES_PASSWORD: postgres
         ports:
           - 5432:5432
+
     steps:
       - name: Pull repository
         uses: actions/checkout@v4
@@ -35,7 +42,7 @@ jobs:
 
       - name: Run rspec
         run: |
-          export DATABASE_URL=postgresql://postgres:postgres@localhost/coupon_store_test
+          export DATABASE_URL=${{ matrix.database_url }}
           bundle exec rails db:create
           bundle exec rails db:schema:load >/dev/null
           RAILS_ENV=test bundle exec rails assets:precompile
