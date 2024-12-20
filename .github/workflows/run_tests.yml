@@ -7,6 +7,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v4
+
+      - name: Bundle install and cache result
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run Ruby lint
+        run: bundle exec standardrb
+
   tests:
     runs-on: ubuntu-latest
     strategy:
@@ -36,9 +50,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-
-      - name: Run Ruby lint
-        run: bundle exec standardrb
 
       - name: Run rspec
         run: |
