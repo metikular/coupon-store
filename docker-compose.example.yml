@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
 
   db:
-    image: postgres:14
+    image: postgres:16
     restart: unless-stopped
     environment:
       - POSTGRES_USER=coupon_store
