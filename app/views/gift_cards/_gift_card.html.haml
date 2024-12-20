@@ -1,0 +1,7 @@
+.rounded.bg-white.dark:bg-dark-white.shadow.p-4.pr-1.flex.justify-between
+  %div
+    .font-bold.text-lg= gift_card.name
+
+  .text-grey-foreground.dark:text-dark-grey-foreground.self-center
+    = link_to gift_card, class: 'block p-2 hover:rounded-full hover:bg-grey-background dark:hover:bg-dark-grey-background' do
+      = heroicon 'chevron-right', options: {class: 'w-6 h-6'}

@@ -1,0 +1,12 @@
+= turbo_frame_tag :charges do
+  .flex.flex-col.gap-4
+    - @charges.each do |charge|
+      .rounded.bg-white.dark:bg-dark-white.shadow.p-4.grid.grid-cols-3.gap-4
+        %div= charge.note
+        .text-right= charge.amount
+        .flex.flex-wrap.gap-2.justify-end
+          = link_to t('.edit'), edit_gift_card_charge_path(@gift_card, charge), class: 'button text'
+          = button_to t('.destroy'), gift_card_charge_path(@gift_card, charge), method: :delete, class: 'button text danger', 'data-turbo-confirm': t('.destroy_confirmation')
+
+  .mt-4.flex.justify-end
+    = link_to t('.new'), new_gift_card_charge_path(@gift_card), class: 'button primary'

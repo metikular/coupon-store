@@ -1,0 +1,8 @@
+.bg-grey-background.dark:bg-dark-grey-background.p-4
+  = link_to new_gift_card_path, class: 'block' do
+    .flex.gap-4.text-grey-foreground.dark:text-dark-grey-foreground.items-center
+      = heroicon :plus, options: {class: 'w-6 h-6'}
+      = t 'gift_cards.new.title'
+
+.p-6.flex.flex-col.gap-4
+  = render @gift_cards

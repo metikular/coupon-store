@@ -2,6 +2,7 @@
   %ul.flex.items-center(style="grid-area: menu")
     %li= link_to t('navigation.coupons'), coupons_path, class: class_names(active: params[:controller] == 'coupons')
     %li= link_to t('navigation.loyalty_cards'), loyalty_cards_path, class: class_names(active: params[:controller] == 'loyalty_cards')
+    %li= link_to t('navigation.gift_cards'), gift_cards_path, class: class_names(active: params[:controller] == 'gift_cards')
 
   = render 'search'
 

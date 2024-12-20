@@ -189,10 +189,20 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.2)
+    method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.5)
+    monetize (1.13.0)
+      money (~> 6.12)
+    money (6.19.0)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.15.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9)
+      money (~> 6.13)
+      railties (>= 3.0)
     msgpack (1.8.0)
-    net-imap (0.5.0)
+    net-imap (0.5.3)
       date
       net-protocol
     net-pop (0.1.2)
@@ -367,6 +377,10 @@ GEM
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     useragent (0.16.11)
+    view_component (3.23.2)
+      activesupport (>= 5.2.0, < 8.1)
+      concurrent-ruby (~> 1)
+      method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -409,6 +423,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   liquid
+  money-rails
   pg (~> 1.5)
   propshaft
   puma (~> 6.6)
@@ -424,6 +439,7 @@ DEPENDENCIES
   tailwindcss-rails
   turbo-rails
   tzinfo-data
+  view_component
   web-console
   webdrivers
 

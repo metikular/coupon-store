@@ -1,0 +1,5 @@
+= turbo_stream.replace dom_id(@gift_card, :balance) do
+  = render GiftCards::BalanceComponent.new(gift_card: @gift_card)
+
+= turbo_stream.update :charges do
+  = render template: 'charges/index'

@@ -58,6 +58,8 @@ bin/dev
     DATABASE_URL=sqlite3:db/development.sqlite3
     ```
 
+- `CURRENCY`: An [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes) currency code to use as default currency. Defaults to `xts`, which is a currency reserved for testing.
+
 ## Similar projects
 
 - [Catima](https://catima.app), Android App

@@ -1,0 +1,9 @@
+%div
+  = simple_form_for @gift_card do |f|
+    = f.input :name
+    - if @gift_card.new_record? || @gift_card.charges.empty?
+      = f.input :currency, collection: Money::Currency.table.values.map { |c| c[:iso_code] }
+      = f.input :balance
+
+    .form-actions
+      = f.submit

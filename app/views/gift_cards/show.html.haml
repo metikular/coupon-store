@@ -1,0 +1,20 @@
+.flex.justify-between
+  %div
+    .font-bold.text-lg= @gift_card.name
+
+  .text-grey-foreground.dark:text-dark-grey-foreground
+    = link_to gift_cards_path do
+      = heroicon 'x-mark', options: {class: 'w-6 h-6'}
+
+.flex.mt-4
+  = render GiftCards::BalanceComponent.new(gift_card: @gift_card)
+
+.mt-6
+  = turbo_frame_tag :charges, src: gift_card_charges_path(@gift_card)
+
+- content_for :footer do
+  .flex.flex-col
+    %hr.border-b-1.border-grey-support.dark:border-dark-grey-support
+    .p-4.flex.flex-wrap.gap-6.text-xs
+      = link_to t('.edit'), edit_gift_card_path(@gift_card), class: 'button text'
+      = link_to t('.delete'), gift_card_path(@gift_card), method: :delete, class: 'button text', 'data-confirm': t('.delete_confirmation')

@@ -1,0 +1,7 @@
+%div
+  = simple_form_for [@gift_card, @charge] do |f|
+    = f.input :note
+    = f.input :amount
+
+    .form-actions
+      = f.submit

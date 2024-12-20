@@ -29,3 +29,14 @@ en:
           </ul>
         remove: Remove
         add: Add another channel
+
+  charges:
+    index:
+      new: New transaction
+      edit: Edit
+      destroy: Destroy
+      destroy_confirmation: Do you really want to delete this transaction? This cannot be undone.
+    new:
+      title: New transacation
+    edit:
+      title: Edit transaction

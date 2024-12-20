@@ -65,6 +65,7 @@ en:
     account: My account
     coupons: Coupons
     loyalty_cards: Loyalty cards
+    gift_cards: Gift cards
   footer:
     open_source: Open source
     self_hostable: Self hostable
@@ -117,6 +118,15 @@ en:
     form:
       help_choose: Help me choose the correct barcode
       code_invalid: Code is not valid for this barcode type
+  gift_cards:
+    new:
+      title: New gift card
+    show:
+      edit: Edit
+      delete: Delete
+      delete_confirmation: Are you sure?
+    edit:
+      title: Edit gift card
 
   coupon:
     expiration:

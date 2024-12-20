@@ -8,6 +8,8 @@ class Ability
     can :manage, :expiration_notification
     can :manage, Coupon, user: user
     can :manage, LoyaltyCard, user: user
+    can :manage, GiftCard, user: user
+    can :manage, Charge, {gift_card: {user:}}
     can :manage, :search
   end
 end

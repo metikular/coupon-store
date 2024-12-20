@@ -7,10 +7,16 @@ en:
       loyalty_card:
         one: Loyalty card
         other: Loyalty cards
+      gift_card:
+        one: Gift card
+        other: Gift cards
 
     attributes:
       coupon:
         barcode_type: Barcode type
+
+      gift_card:
+        name: Name
 
       user:
         expiration_notification_days: Days before the coupon expires

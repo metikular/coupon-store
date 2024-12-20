@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     end
     resources :coupons
     resources :loyalty_cards
+    resources :gift_cards do
+      resources :charges, except: :show
+    end
     resource :search, only: :show
   end
 end
