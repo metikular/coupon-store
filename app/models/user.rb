@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :loyalty_cards
 
   def remember_me
-    super.nil? ? true : super
+    super.nil? || super
   end
 
   def expiration_notification_channels=(channels)
