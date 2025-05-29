@@ -112,6 +112,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.1)
+    docile (1.4.1)
     drb (2.2.1)
     enumerize (2.8.1)
       activesupport (>= 3.2)
@@ -336,6 +337,12 @@ GEM
     simple_form (5.3.1)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     solid_queue (1.1.5)
       activejob (>= 7.1)
       activerecord (>= 7.1)
@@ -432,6 +439,7 @@ DEPENDENCIES
   rspec-rails
   selenium-webdriver
   simple_form
+  simplecov
   solid_queue
   sqlite3 (~> 1.4)
   standard

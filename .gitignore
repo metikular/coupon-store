@@ -36,3 +36,5 @@ app/views/pages/data_privacy.html.haml
 /app/assets/builds/*
 !/app/assets/builds/.keep
 db/development.sqlite3
+
+coverage/
