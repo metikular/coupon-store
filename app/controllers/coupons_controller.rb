@@ -23,7 +23,7 @@ class CouponsController < ApplicationController
     if !@preview && @coupon.save
       redirect_to coupons_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
