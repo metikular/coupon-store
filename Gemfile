@@ -38,9 +38,8 @@ end
 group :test do
   gem "capybara"
   gem "capybara-screenshot"
-  gem "selenium-webdriver"
+  gem "cuprite"
   gem "simplecov", require: false
-  gem "webdrivers"
 end
 
 group :development, :test do
