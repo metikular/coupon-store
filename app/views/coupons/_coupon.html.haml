@@ -12,5 +12,5 @@
         = l coupon.valid_until.to_date
 
   .text-grey-foreground.dark:text-dark-grey-foreground.self-center
-    = link_to coupon, class: 'block p-2 hover:rounded-full hover:bg-grey-background dark:hover:bg-dark-grey-background' do
+    = link_to coupon, class: 'block p-2 hover:rounded-full hover:bg-grey-background dark:hover:bg-dark-grey-background', 'data-id': coupon.id do
       = heroicon 'chevron-right', options: {class: 'w-6 h-6'}
