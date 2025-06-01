@@ -13,7 +13,7 @@ module Users
       if @user.update(expiration_notification_params)
         redirect_to user_path
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 

@@ -19,7 +19,7 @@ class LoyaltyCardsController < ApplicationController
     if !@preview && @loyalty_card.save
       redirect_to loyalty_cards_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -32,7 +32,7 @@ class LoyaltyCardsController < ApplicationController
     if !@preview && @loyalty_card.update(loyalty_card_params)
       redirect_to @loyalty_card
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

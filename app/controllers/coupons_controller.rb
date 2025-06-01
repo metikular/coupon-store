@@ -36,7 +36,7 @@ class CouponsController < ApplicationController
     if !@preview && @coupon.update(coupon_params)
       redirect_to @coupon
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

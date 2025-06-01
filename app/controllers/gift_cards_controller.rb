@@ -17,7 +17,7 @@ class GiftCardsController < ApplicationController
     if @gift_card.save
       redirect_to gift_cards_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -28,7 +28,7 @@ class GiftCardsController < ApplicationController
     if @gift_card.update(gift_card_params)
       redirect_to @gift_card
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
