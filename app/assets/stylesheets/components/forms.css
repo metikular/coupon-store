@@ -1,0 +1,39 @@
+.input {
+  @apply mt-6;
+}
+
+label {
+  @apply font-bold uppercase text-grey-foreground dark:text-dark-grey-foreground block;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="datetime-local"], input[type="date"], textarea {
+  @apply rounded shadow border-none w-full bg-white dark:bg-dark-white;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  @apply outline outline-primary outline-offset-0 border-0;
+}
+
+select {
+  @apply border-none w-full shadow bg-white dark:bg-dark-white;
+}
+
+.hint {
+  @apply text-sm text-grey-foreground dark:text-dark-grey-foreground;
+}
+
+label + input, label + select, label + textarea {
+  @apply mt-2;
+}
+
+.form-actions {
+  @apply mt-16 flex justify-end items-end gap-2;
+}
+
+.form-actions .button.text {
+  @apply mb-2;
+}
+
+.error {
+  @apply block mt-2 text-danger;
+}
