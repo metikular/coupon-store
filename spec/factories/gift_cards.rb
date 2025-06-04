@@ -4,5 +4,6 @@ FactoryBot.define do
   factory :gift_card do
     user
     name { "My gift card" }
+    currency { "USD" }
   end
 end

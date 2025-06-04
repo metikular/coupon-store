@@ -21,4 +21,20 @@ RSpec.describe "account" do
 
     expect { user.reload }.to raise_error(ActiveRecord::RecordNotFound)
   end
+
+  context "with coupons, loyalty cards and gift cards" do
+    let!(:coupon) { create(:coupon, user:) }
+    let!(:loyalty_card) { create(:loyalty_card, user:) }
+    let!(:gift_card) { create(:gift_card, user:) }
+
+    it "deletes an account" do
+      visit user_path(locale: :en)
+
+      expect do
+        click_on I18n.t("users.show.delete_my_account")
+      end.to change(User, :count).by(-1)
+
+      expect { user.reload }.to raise_error(ActiveRecord::RecordNotFound)
+    end
+  end
 end

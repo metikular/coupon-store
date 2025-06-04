@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable
 
-  has_many :coupons
-  has_many :loyalty_cards
-  has_many :gift_cards
+  has_many :coupons, dependent: :destroy
+  has_many :loyalty_cards, dependent: :destroy
+  has_many :gift_cards, dependent: :destroy
 
   def remember_me
     super.nil? || super
