@@ -1,4 +1,8 @@
 en:
+  application:
+    search:
+      search: Search
+
   enumerize:
     coupon:
       barcode_type:

@@ -3,6 +3,7 @@
 .mt-6.pb-0.flex.gap-4
   = link_to t('.result_count', type: Coupon.model_name.human(count: 2), count: @search.count('coupon')), url_for(type: 'coupon', q: @search.q), class: "button text toggle #{@search.type == 'coupon' ? 'active' : ''}"
   = link_to t('.result_count', type: LoyaltyCard.model_name.human(count: 2), count: @search.count('loyalty_card')), url_for(type: 'loyalty_card', q: @search.q), class: "button text toggle #{@search.type == 'loyalty_card' ? 'active' : ''}"
+  = link_to t('.result_count', type: GiftCard.model_name.human(count: 2), count: @search.count('gift_card')), url_for(type: 'gift_card', q: @search.q), class: "button text toggle #{@search.type == 'gift_card' ? 'active' : ''}"
 
 .mt-6.flex.flex-col.gap-4
   - @search.call.each do |search_result|

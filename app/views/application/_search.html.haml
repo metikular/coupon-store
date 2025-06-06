@@ -7,4 +7,6 @@
           .h-full.grow.flex.items-end.pb-3
             = heroicon 'magnifying-glass', options: {class: 'w-4 h-4 text-grey-foreground'}
         %div(style="grid-column: 1; grid-row: 1")
-          = text_field_tag :q, params[:q]
+          = text_field_tag :q, params[:q], title: t('.search')
+        .flex.justify-end.sr-only(style="grid-column: 1; grid-row: 1")
+          = submit_tag I18n.t("application.search.search")

@@ -17,8 +17,12 @@ module Forms
     def initialize(attributes = {})
       super
 
-      if type.blank? && count("coupon") == 0 && count("loyalty_card") > 0
-        self.type = "loyalty_card"
+      if type.blank?
+        self.type = {
+          coupon: count("coupon"),
+          loyalty_card: count("loyalty_card"),
+          gift_card: count("gift_card")
+        }.select { |_type, count| count > 0 }.keys.first
       end
 
       self.type = type.presence || "coupon"
@@ -52,6 +56,11 @@ module Forms
           .where(<<~SQL)
             store ILIKE '%#{query}%' OR
             code ILIKE '%#{query}%'
+          SQL
+      when "gift_card"
+        GiftCard
+          .where(<<~SQL)
+            name ILIKE '%#{query}%'
           SQL
       end
     end
