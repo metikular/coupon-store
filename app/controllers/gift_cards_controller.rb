@@ -14,6 +14,8 @@ class GiftCardsController < ApplicationController
   end
 
   def create
+    @gift_card.balance = Money.from_amount(gift_card_params[:balance].to_f, gift_card_params[:currency])
+
     if @gift_card.save
       redirect_to gift_cards_path
     else
@@ -25,6 +27,8 @@ class GiftCardsController < ApplicationController
   end
 
   def update
+    @gift_card.balance = Money.from_amount(gift_card_params[:balance].to_f, gift_card_params[:currency])
+
     if @gift_card.update(gift_card_params)
       redirect_to @gift_card
     else
