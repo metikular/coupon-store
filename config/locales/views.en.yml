@@ -9,6 +9,7 @@ en:
     show:
       expiration_notification:
         title: Expiration notification
+        edit: Edit expiration notification settings
         channels:
           one: 'Active on %{count} channel'
           other: 'Active on %{count} channels'

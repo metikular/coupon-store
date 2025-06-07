@@ -19,7 +19,7 @@
         = t '.expiration_notification.deactivated'
 
   .text-grey-foregroun.dark:text-dark-grey-foregroundd
-    = link_to edit_user_expiration_notification_path do
+    = link_to edit_user_expiration_notification_path, title: t('.expiration_notification.edit') do
       = heroicon :pencil, options: {class: 'w-6 h-6'}
 
 .mt-14

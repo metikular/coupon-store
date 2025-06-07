@@ -1,6 +1,9 @@
 en:
   activerecord:
     models:
+      user:
+        one: User
+        other: Users
       coupon:
         one: Coupon
         other: Coupons
