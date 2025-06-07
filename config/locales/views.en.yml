@@ -14,6 +14,8 @@ en:
           one: 'Active on %{count} channel'
           other: 'Active on %{count} channels'
         deactivated: Notifications are disabled
+      email:
+        edit: Edit email address
 
     expiration_notifications:
       edit:

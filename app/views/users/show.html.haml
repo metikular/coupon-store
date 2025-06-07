@@ -6,7 +6,7 @@
     .text-grey-foreground.dark:text-dark-grey-foreground= @user.email
 
   .text-grey-foregroun.dark:text-dark-grey-foregroundd
-    = link_to edit_user_path do
+    = link_to edit_user_path, title: t('.email.edit') do
       = heroicon :pencil, options: {class: 'w-6 h-6'}
 
 .mt-10.flex.justify-between.items-center

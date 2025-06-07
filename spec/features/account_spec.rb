@@ -37,4 +37,22 @@ RSpec.describe "account" do
       expect { user.reload }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
+
+  it "updates the email address" do
+    visit user_path(locale: :en)
+
+    click_on I18n.t("users.show.email.edit")
+    expect(page).to have_css "h1", text: I18n.t("users.edit.title")
+
+    new_email = "new@example.com"
+    fill_in User.human_attribute_name(:email), with: new_email
+
+    click_on I18n.t("helpers.submit.update", model: I18n.t("activerecord.models.user.one"))
+
+    expect(page).to have_current_path user_path(locale: :en)
+    expect(page).to have_content new_email
+
+    user.reload
+    expect(user.email).to eq new_email
+  end
 end
