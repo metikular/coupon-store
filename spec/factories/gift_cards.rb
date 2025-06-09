@@ -5,5 +5,6 @@ FactoryBot.define do
     user
     name { "My gift card" }
     currency { "USD" }
+    balance { Money.from_amount(100, "USD") }
   end
 end

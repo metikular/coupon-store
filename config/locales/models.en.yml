@@ -13,6 +13,9 @@ en:
       gift_card:
         one: Gift card
         other: Gift cards
+      charge:
+        one: Redemption
+        other: Redemptions
 
     attributes:
       coupon:

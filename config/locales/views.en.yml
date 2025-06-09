@@ -35,11 +35,11 @@ en:
 
   charges:
     index:
-      new: New transaction
+      new: New redemption
       edit: Edit
       destroy: Destroy
-      destroy_confirmation: Do you really want to delete this transaction? This cannot be undone.
+      destroy_confirmation: Do you really want to delete this redemption? This cannot be undone.
     new:
-      title: New transacation
+      title: New redemption
     edit:
-      title: Edit transaction
+      title: Edit redemption

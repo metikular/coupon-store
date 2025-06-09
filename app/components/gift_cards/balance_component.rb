@@ -8,4 +8,12 @@ class GiftCards::BalanceComponent < ViewComponent::Base
   def balance
     @gift_card.balance
   end
+
+  def warning_class
+    if balance > 0
+      ""
+    else
+      "text-danger"
+    end
+  end
 end

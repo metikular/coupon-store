@@ -16,11 +16,6 @@ class ChargesController < ApplicationController
 
     @gift_card.with_lock do
       successful = @charge.save
-
-      if successful
-        @gift_card.balance += @charge.amount
-        @gift_card.save!
-      end
     end
 
     if successful
@@ -47,9 +42,8 @@ class ChargesController < ApplicationController
       successful = @charge.update(charge_params)
 
       if successful && @charge.amount_cents_previously_changed?
-        cents_change = @charge.previous_changes["amount_cents"].reduce(:-)
+        @charge.previous_changes["amount_cents"].reduce(:-)
 
-        @gift_card.balance -= Money.new(cents_change)
         @gift_card.save!
       end
     end
@@ -70,11 +64,7 @@ class ChargesController < ApplicationController
   end
 
   def destroy
-    @gift_card.with_lock do
-      @charge.destroy!
-      @gift_card.balance -= @charge.amount
-      @gift_card.save!
-    end
+    @charge.destroy!
 
     respond_to do |format|
       format.html do
@@ -96,5 +86,10 @@ class ChargesController < ApplicationController
         :note,
         :amount
       )
+      .to_h do |param, value|
+        next [param, value] if param != "amount"
+
+        [param, Money.from_amount(value.to_f, @gift_card.currency)]
+      end
   end
 end
