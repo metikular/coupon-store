@@ -35,14 +35,28 @@
     @apply cursor-pointer;
   }
 
-  button.primary, .button.primary, input[type="submit"]:not(.text) {
-    @apply inline-block bg-primary dark:bg-dark-primary inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
+  button.primary,
+  .button.primary,
+  button.secondary,
+  .button.secondary,
+  input[type="submit"]:not(.text) {
+    @apply inline-block inline-flex items-center justify-center uppercase text-grey-foreground font-bold px-6 py-3;
 
     min-width: 10rem;
   }
 
-  button.primary:hover, .button.primary:hover, input[type="submit"]:hover:not(.text) {
+  button.primary:hover,
+  .button.primary:hover,
+  button.secondary:hover,
+  .button.secondary:hover,
+  input[type="submit"]:hover:not(.text) {
     @apply shadow;
+  }
+
+  button.primary,
+  .button.primary,
+  input[type="submit"]:not(.text) {
+    @apply bg-primary dark:bg-dark-primary;
   }
 
   button.text, .button.text, input[type="submit"].text {

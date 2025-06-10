@@ -29,3 +29,7 @@ en:
         expiration_notification_title: Notification title
         expiration_notification_body: Notification body
         expiration_notification_channels: Apprise channels
+
+  charge:
+    note:
+      setting_balance: Setting balance

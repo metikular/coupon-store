@@ -39,7 +39,12 @@ en:
       edit: Edit
       destroy: Destroy
       destroy_confirmation: Do you really want to delete this redemption? This cannot be undone.
+      set_balance: Set balance
     new:
       title: New redemption
     edit:
       title: Edit redemption
+
+  balances:
+    edit:
+      update: Set balance

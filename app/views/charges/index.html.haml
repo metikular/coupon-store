@@ -8,5 +8,6 @@
           = link_to t('.edit'), edit_gift_card_charge_path(@gift_card, charge), class: 'button text'
           = button_to t('.destroy'), gift_card_charge_path(@gift_card, charge), method: :delete, class: 'button text danger', 'data-turbo-confirm': t('.destroy_confirmation')
 
-  .mt-4.flex.justify-end
+  .mt-4.flex.justify-end.gap-2
+    = link_to t('.set_balance'), edit_gift_card_balance_path(@gift_card), class: 'button secondary', 'data-turbo-frame': '_top'
     = link_to t('.new'), new_gift_card_charge_path(@gift_card), class: 'button primary'

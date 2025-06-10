@@ -1,0 +1,5 @@
+= simple_form_for @gift_card, url: gift_card_balance_path(@gift_card) do |f|
+  = f.input :balance
+
+  .form-actions
+    = f.submit t('.update')

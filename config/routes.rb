@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :loyalty_cards
     resources :gift_cards do
       resources :charges, except: :show
+      resource :balance, only: %i[edit update]
     end
     resource :search, only: :show
   end
