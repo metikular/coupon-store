@@ -9,7 +9,7 @@ class BalancesController < ApplicationController
   def update
     @gift_card.with_lock do
       new_balance = Money.from_amount(params.dig(:gift_card, :balance).to_f, @gift_card.currency)
-      difference = @gift_card.balance - new_balance
+      difference = new_balance - @gift_card.balance
 
       @gift_card.charges.create!(
         note: I18n.t("charge.note.setting_balance"),

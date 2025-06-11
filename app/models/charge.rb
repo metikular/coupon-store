@@ -14,13 +14,13 @@ class Charge < ApplicationRecord
     cents_difference = previous_changes.dig(:amount_cents)
     return if cents_difference.blank?
 
-    cents_difference = cents_difference.reduce(&:-)
+    cents_difference = -cents_difference.reduce(&:-)
     difference = Money.new(cents_difference, gift_card.currency)
 
     gift_card.update!(balance: gift_card.balance + difference)
   end
 
   def undo_charge
-    gift_card.update!(balance: gift_card.balance - amount * -1)
+    gift_card.update!(balance: gift_card.balance - amount)
   end
 end

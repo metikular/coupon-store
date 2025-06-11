@@ -89,6 +89,8 @@ class ChargesController < ApplicationController
       .to_h do |param, value|
         next [param, value] if param != "amount"
 
+        value = -value.to_f.abs
+
         [param, Money.from_amount(value.to_f, @gift_card.currency)]
       end
   end

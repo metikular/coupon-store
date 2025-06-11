@@ -17,21 +17,21 @@ RSpec.describe "manage charges of gift cards", :js do
     click_on I18n.t("helpers.submit.create", model: I18n.t("activerecord.models.charge.one"))
 
     expect(page).to have_content("Test charge")
-    expect(page).to have_content("25")
+    expect(page).to have_content("-25")
 
     expect(gift_card.reload).to have_attributes(
       balance: Money.from_amount(75, "USD"),
       charges: [
         have_attributes(
           note: "Test charge",
-          amount: Money.from_amount(25, "USD")
+          amount: Money.from_amount(-25, "USD")
         )
       ]
     )
   end
 
   it "updates a charge" do
-    charge = create(:charge, gift_card:, amount: Money.from_amount(10, "USD"), note: "Old note")
+    charge = create(:charge, gift_card:, amount: Money.from_amount(-10, "USD"), note: "Old note")
 
     expect(gift_card.reload).to have_attributes(balance: Money.from_amount(90, "USD"))
 
@@ -46,20 +46,20 @@ RSpec.describe "manage charges of gift cards", :js do
     click_on I18n.t("helpers.submit.update", model: I18n.t("activerecord.models.charge.one"))
 
     expect(page).to have_content("Updated note")
-    expect(page).to have_content("15")
+    expect(page).to have_content("-15")
     expect(gift_card.reload).to have_attributes(
       balance: Money.from_amount(85, "USD"),
       charges: [
         have_attributes(
           note: "Updated note",
-          amount: Money.from_amount(15, "USD")
+          amount: Money.from_amount(-15, "USD")
         )
       ]
     )
   end
 
   it "deletes a charge" do
-    charge = create(:charge, gift_card:, amount: Money.from_amount(10, "USD"))
+    charge = create(:charge, gift_card:, amount: Money.from_amount(-10, "USD"))
 
     expect(gift_card.reload).to have_attributes(balance: Money.from_amount(90, "USD"))
 
@@ -92,7 +92,7 @@ RSpec.describe "manage charges of gift cards", :js do
       click_on I18n.t("helpers.submit.create", model: I18n.t("activerecord.models.charge.one"))
 
       expect(page).to have_content("Test charge")
-      expect(page).to have_content("25")
+      expect(page).to have_content("-25")
       expect(page).to have_css "#balance_gift_card_#{gift_card.id}.#{warning_class}"
 
       expect(gift_card.reload).to have_attributes(
@@ -100,7 +100,7 @@ RSpec.describe "manage charges of gift cards", :js do
         charges: [
           have_attributes(
             note: "Test charge",
-            amount: Money.from_amount(25, "USD")
+            amount: Money.from_amount(-25, "USD")
           )
         ]
       )

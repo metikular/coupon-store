@@ -23,7 +23,7 @@ RSpec.describe "sets the balance", :js do
       charges: [
         have_attributes(
           note: I18n.t("charge.note.setting_balance"),
-          amount: Money.from_amount(40, "USD")
+          amount: Money.from_amount(-40, "USD")
         )
       ]
     )
