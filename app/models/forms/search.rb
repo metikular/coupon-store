@@ -43,25 +43,35 @@ module Forms
     def search(search_type)
       return [] if q.blank?
 
+      ilike = ilike_identifier
+
       case search_type
       when "coupon"
         Coupon
           .where(<<~SQL)
-            store ILIKE '%#{query}%' OR
-            code ILIKE '%#{query}%' OR
-            description ILIKE '%#{query}%'
+            store #{ilike} '%#{query}%' OR
+            code #{ilike} '%#{query}%' OR
+            description #{ilike} '%#{query}%'
           SQL
       when "loyalty_card"
         LoyaltyCard
           .where(<<~SQL)
-            store ILIKE '%#{query}%' OR
-            code ILIKE '%#{query}%'
+            store #{ilike} '%#{query}%' OR
+            code #{ilike} '%#{query}%'
           SQL
       when "gift_card"
         GiftCard
           .where(<<~SQL)
-            name ILIKE '%#{query}%'
+            name #{ilike} '%#{query}%'
           SQL
+      end
+    end
+
+    def ilike_identifier
+      if ActiveRecord::Base.connection.adapter_name == "PostgreSQL"
+        "ILIKE"
+      else
+        "LIKE"
       end
     end
   end

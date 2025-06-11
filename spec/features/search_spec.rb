@@ -24,6 +24,18 @@ RSpec.describe "search" do
     expect(page).not_to have_content gift_card.name
   end
 
+  it "finds a coupon irrelevant of the case" do
+    visit root_path(locale: :en)
+
+    fill_in "q", with: "acme coupon"
+    click_on I18n.t("application.search.search")
+
+    expect(page).to have_content coupon.store
+    expect(page).to have_content coupon.code
+    expect(page).not_to have_content loyalty_card.store
+    expect(page).not_to have_content gift_card.name
+  end
+
   it "finds a loyalty card by code" do
     visit root_path(locale: :en)
 
