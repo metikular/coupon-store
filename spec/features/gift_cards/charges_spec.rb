@@ -77,10 +77,14 @@ RSpec.describe "manage charges of gift cards", :js do
   end
 
   context "when the charge is larger than the current balance" do
+    let(:warning_class) { "text-danger" }
+
     it "stores the charge and shows a warning" do
       gift_card.update!(balance: Money.from_amount(10, "USD"))
 
       visit gift_card_path(gift_card, locale: :en)
+      expect(page).to have_css "#balance_gift_card_#{gift_card.id}"
+      expect(page).not_to have_css "#balance_gift_card_#{gift_card.id}.#{warning_class}"
 
       click_on I18n.t("charges.index.new")
       fill_in Charge.human_attribute_name(:amount), with: 25
@@ -89,6 +93,7 @@ RSpec.describe "manage charges of gift cards", :js do
 
       expect(page).to have_content("Test charge")
       expect(page).to have_content("25")
+      expect(page).to have_css "#balance_gift_card_#{gift_card.id}.#{warning_class}"
 
       expect(gift_card.reload).to have_attributes(
         balance: Money.from_amount(-15, "USD"),
