@@ -55,4 +55,18 @@ RSpec.describe "account" do
     user.reload
     expect(user.email).to eq new_email
   end
+
+  it "shows an error on validation errors" do
+    visit user_path(locale: :en)
+
+    click_on I18n.t("users.show.email.edit")
+    expect(page).to have_css "h1", text: I18n.t("users.edit.title")
+
+    fill_in User.human_attribute_name(:email), with: ""
+
+    click_on I18n.t("helpers.submit.update", model: I18n.t("activerecord.models.user.one"))
+
+    expect(page).to have_content I18n.t("errors.messages.blank")
+    expect(user.reload.email).to be_present
+  end
 end
