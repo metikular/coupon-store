@@ -34,6 +34,22 @@ RSpec.describe "manages gift cards" do
     )
   end
 
+  it "shows validation errors when creating" do
+    visit gift_cards_path(locale: :en)
+
+    click_on I18n.t("gift_cards.new.title")
+    expect(page).to have_css "h1", text: I18n.t("gift_cards.new.title")
+
+    fill_in GiftCard.human_attribute_name(:name), with: "Test Card"
+    fill_in GiftCard.human_attribute_name(:balance), with: "100"
+
+    expect do
+      click_on I18n.t("helpers.submit.create", model: I18n.t("activerecord.models.gift_card.one"))
+    end.not_to change(GiftCard, :count)
+
+    expect(page).to have_content(I18n.t("errors.messages.blank"))
+  end
+
   it "shows a gift card" do
     visit gift_card_path(gift_card, locale: :en)
 

@@ -6,6 +6,7 @@ class GiftCard < ApplicationRecord
   has_many :charges, dependent: :destroy
 
   validates :name, presence: true
+  validates :currency, presence: true
 
   scope :sorted_by_name, -> { order(:name) }
 
