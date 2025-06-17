@@ -19,7 +19,12 @@ Capybara.asset_host = "http://localhost:3000"
 
 Capybara.javascript_driver = :cuprite
 Capybara.register_driver(:cuprite) do |app|
-  Capybara::Cuprite::Driver.new(app, window_size: [1200, 800])
+  Capybara::Cuprite::Driver.new(
+    app,
+    window_size: [1200, 1024],
+    timeout: 20,
+    process_timeout: 60
+  )
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
