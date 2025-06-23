@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scan code using camera and autodetect barcode type
 - Attach images
 
+### Fixed
+
+- Fix editing of gift cards not resetting balance to 0
+
 ## [2.1.0] - 2025-06-17
 
 ### Added
