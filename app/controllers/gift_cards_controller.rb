@@ -57,6 +57,7 @@ class GiftCardsController < ApplicationController
     params
       .require(:gift_card)
       .permit(
+        :badge,
         :name,
         :currency,
         :balance

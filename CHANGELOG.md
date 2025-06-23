@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+**Breaking change:** Images are stored in the `storage` directory relative to the application directory (this would be `/app/storage` within the Docker container). Ensure that this directory is writable for the application and do not forget to back it up. When using Docker, ensure that you mount that directory as a volume.
+
 ### Added
 
 - Scan code using camera and autodetect barcode type
+- Attach images
 
 ## [2.1.0] - 2025-06-17
 

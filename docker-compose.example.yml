@@ -9,6 +9,8 @@ services:
       - DATABASE_URL=postgres://coupon_store:SECRET_PASSWORD@db/coupon_store
       - SECRET_KEY_BASE=change-me
       - HOST=coupons.example.com
+    volumes:
+      - coupon-store-storage:/app/storage
     hostname: web
     restart: unless-stopped
 
@@ -23,3 +25,4 @@ services:
 
 volumes:
   coupon-store-database:
+  coupon-store-storage:

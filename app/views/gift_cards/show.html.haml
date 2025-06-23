@@ -1,5 +1,9 @@
 .flex.justify-between
   %div
+    - if @gift_card.badge.attached?
+      .mb-4.mr-4.justify-center.md:max-w-xs
+        = image_tag @gift_card.badge
+
     .font-bold.text-lg= @gift_card.name
 
   .text-grey-foreground.dark:text-dark-grey-foreground

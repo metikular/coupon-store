@@ -61,6 +61,7 @@ class CouponsController < ApplicationController
     params
       .require(:coupon)
       .permit(
+        :badge,
         :code,
         :barcode_type,
         :store,

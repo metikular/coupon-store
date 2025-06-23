@@ -1,5 +1,9 @@
 .flex.justify-between
   %div
+    - if @loyalty_card.badge.attached?
+      .mb-4.mr-4.justify-center.md:max-w-xs
+        = image_tag @loyalty_card.badge
+
     - if @loyalty_card.store.present?
       .text-grey-foreground.dark:text-dark-grey-foreground.text-sm.uppercase.font-bold.pb-4= @loyalty_card.store
 

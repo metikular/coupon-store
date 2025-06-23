@@ -57,6 +57,7 @@ class LoyaltyCardsController < ApplicationController
     params
       .require(:loyalty_card)
       .permit(
+        :badge,
         :code,
         :barcode_type,
         :store

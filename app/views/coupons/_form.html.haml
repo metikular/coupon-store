@@ -1,5 +1,6 @@
 %div{'data-controller': @preview ? "barcode-preview barcode-scanner" : "barcode-scanner", 'data-barcode-scanner-barcode-url-value': barcodes_path}
   = simple_form_for @coupon do |f|
+    = f.input :badge
     = f.input :code
     %button.text.mt-2(type="button" data-action="barcode-scanner#activate")
       = t('.scan')

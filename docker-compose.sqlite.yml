@@ -11,6 +11,8 @@ services:
     restart: unless-stopped
     volumes:
       - coupon-store-database:/app/db/data
+      - coupon-store-storage:/app/storage
 
 volumes:
   coupon-store-database:
+  coupon-store-storage:

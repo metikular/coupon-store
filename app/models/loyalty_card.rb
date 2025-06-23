@@ -3,6 +3,8 @@ class LoyaltyCard < ApplicationRecord
 
   belongs_to :user
 
+  has_one_attached :badge
+
   enumerize :barcode_type, in: BarcodeHelper::TYPES
 
   validates :code, presence: true
