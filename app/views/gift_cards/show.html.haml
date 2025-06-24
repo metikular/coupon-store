@@ -22,3 +22,5 @@
     .p-4.flex.flex-wrap.gap-6.text-xs
       = link_to t('.edit'), edit_gift_card_path(@gift_card), class: 'button text'
       = link_to t('.delete'), gift_card_path(@gift_card), method: :delete, class: 'button text', 'data-confirm': t('.delete_confirmation')
+      - if @gift_card.badge.attached?
+        = link_to t('.delete_badge'), gift_card_badge_path(@gift_card), method: :delete, class: 'button text', 'data-confirm': t('.delete_badge_confirmation')

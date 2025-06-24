@@ -103,6 +103,8 @@ en:
       edit: Edit
       delete: Delete
       delete_confirmation: Are you sure?
+      delete_badge: Delete badge
+      delete_badge_confirmation: Are you sure that you want to delete the main image?
     edit:
       title: Edit coupon
     coupon:
@@ -118,6 +120,8 @@ en:
       edit: Edit
       delete: Delete
       delete_confirmation: Are you sure?
+      delete_badge: Delete badge
+      delete_badge_confirmation: Are you sure that you want to delete the main image?
     edit:
       title: Edit loyalty card
     form:
@@ -130,6 +134,8 @@ en:
       edit: Edit
       delete: Delete
       delete_confirmation: Are you sure?
+      delete_badge: Delete badge
+      delete_badge_confirmation: Are you sure that you want to delete the main image?
     edit:
       title: Edit gift card
 
