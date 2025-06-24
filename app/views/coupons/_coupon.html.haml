@@ -1,7 +1,9 @@
 .rounded.bg-white.dark:bg-dark-white.shadow.flex.flex-col.md:flex-row
-  - if coupon.badge.attached?
-    .p-4.justify-center.md:max-w-xs
+  .p-4.flex.justify-center.w-full.md:max-w-xs
+    - if coupon.badge.attached?
       = image_tag coupon.badge
+    - else
+      .w-full.bg-gray-50
 
   .flex.justify-between.w-full.p-4.pr-1
     %div
