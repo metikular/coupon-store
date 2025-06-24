@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Scan code using camera and autodetect barcode type
 - Attach images
+- List of gift cards now shows their balance
 
 ### Fixed
 

@@ -8,6 +8,7 @@
   .flex.justify-between.w-full.p-4.pr-1
     %div
       .font-bold.text-lg= gift_card.name
+      %div= gift_card.balance
 
     .text-grey-foreground.dark:text-dark-grey-foreground.self-center
       = link_to gift_card, class: 'block p-2 hover:rounded-full hover:bg-grey-background dark:hover:bg-dark-grey-background' do
