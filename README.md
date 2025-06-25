@@ -8,6 +8,7 @@ A home for all your coupons and loyalty cards. Free to use at https://coupon.met
 
 - Store coupons and discounts
 - Store loyalty cards
+- Store gift cards
 - Several types of barcodes and QR codes supported for coupons and loyalty cards
 - Be notified via [apprise](https://github.com/caronc/apprise) when a coupon expires soon
 - Dark mode
