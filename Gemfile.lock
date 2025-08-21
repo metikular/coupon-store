@@ -385,7 +385,7 @@ GEM
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     useragent (0.16.11)
-    view_component (4.0.1)
+    view_component (4.0.2)
       activesupport (>= 7.1.0, < 8.1)
       concurrent-ruby (~> 1)
     warden (1.2.9)
